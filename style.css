@@ -61,7 +61,7 @@ th, td {
 @media only screen and (max-width: 759px) {
     body {
         font-size: 14px;
-        grid-template-columns: 1;
+        grid-template-columns: 1fr;
         grid-template-areas: "top"
                              "header"
                              "content";
@@ -89,7 +89,7 @@ th, td {
 @media only screen and (min-width: 760px) and (max-width: 1199px) {
     body {
         font-size: 16px;
-        grid-template-columns: 1;
+        grid-template-columns: 1fr;
         grid-template-areas: "top"
                              "header"
                              "content";
