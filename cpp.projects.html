@@ -44,13 +44,13 @@
           <h2>I don't like</h2>
           
           <h3>Old habits die hard</h3>
+            <ul class="text">
+              <li><q>New compilers have bugs.</q></li>
+              <li><q>Modern C++ is juste more complex for no benefit.</q></li>
+              <li><q>Clang is slow and doesn't optimize well.</q></li>
+              <li><q>GCC generates the best output with `-march=nocona`</q></li>
+            </ul>
             <p class="text">
-              <ul>
-                <li><q>New compilers have bugs.</q></li>
-                <li><q>Modern C++ is juste more complex for no benefit.</q></li>
-                <li><q>Clang is slow and doesn't optimize well.</q></li>
-                <li><q>GCC generates the best output with `-march=nocona`</q></li>
-              </ul>
                 There are still large C++ projects stuck on whatever comes with RHEL 5 or 6 (gcc 4.4.X).
                 Anything below 4.8 is painful to use since it won't even implement most of C++11.
                 It would be nice to have a clear governance when it comes to language/implementation versions.
@@ -64,7 +64,9 @@
           <h3>Build tools</h3>
         
           <h3>Debugging</h3>
-            Debugging C++ can mean stepping through a large amount of boilerplate generic code and/or macros, espcially when using libraries like the STL and Boost.
+            <p class="text">
+              Debugging C++ can mean stepping through a large amount of boilerplate generic code and/or macros, espcially when using libraries like the STL and Boost.
+            </p>
             <div class="text">
               <blockquote class="twitter-tweet" data-lang="en">
                   <p lang="en" dir="ltr">
