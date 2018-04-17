@@ -27,12 +27,21 @@
           
           <h2>I don't like</h2>
           <h3>Old habits die hard</h3>
+            <p class="text">
+                <blockquote>New compilers have bugs.</blockquote>
+                <blockquote>Modern C++ is juste more complex for no benefit.</blockquote>
+                <blockquote>Clang is slow and doesn't optimize well.</blockquote>
+                <blockquote>GCC generates the best output with `-march=nocona`</blockquote>
+                There are still large C++ projects stuck on whatever comes with RHEL 5 or 6 (gcc 4.4.X).
+                Anything below 4.8 is painful to use since it won't even implement most of C++11.
+            </p>
           <h3>Cargo cults</h3>
           <h3>Unsafe defaults</h3>
           <h3>Distribution</h3>
           <h3>Build tools</h3>
           <h3>Debugging</h3>
-            <div class="text" style="border: 1px solid red;">
+            Debugging C++ can mean stepping through a large amount of boilerplate generic code and/or macros, espcially when using libraries like the STL and Boost.
+            <div class="text">
               <blockquote class="twitter-tweet" data-lang="en">
                   <p lang="en" dir="ltr">
                       Modern C++ constructs like &quot;for (auto&amp; x : xs)&quot; look pretty, but they destroy the ability to single step in debug mode without template hell
