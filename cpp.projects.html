@@ -18,27 +18,51 @@
     	</header>
     	<div class="margin-left"></div>
     	<div class="content">
-          <h1>Pro's and con's</h1>
           <h2>I like</h2>
           <h3>Performance</h3>
+            <p class="text">
+              I feel like we get 80% of the performance for 20% of the effort.
+              Modern compilers will find amazing ways to opimize our code as long as it we don't make it a hairy mess,
+              and it's easy enough to measure and control memory allocations.
+            </p>
+
           <h3>Libraries</h3>
+            <p class="text">
+                The STL has a good selection of containers, algorithms, and type traits.
+                There are old, stable, and documented libraries like [Boost](), [QuickFIX](), [googletest]()...
+                There are new, good quality libraries for a number of common tasks, like [JSON](), [fmt](), [Catch2](), [](pyBind11)...
+            </p>
+
           <h3>Tools</h3>
+            <p class="text">
+                Compilers have improved warnings a lot, and sanitizers are very good at catching a number of bugs early on.
+                A simple CI setup can now help produce programs of a much higher quality than just a few years ago.
+            </p>
+            
           <h3>Best practices</h3>
           
           <h2>I don't like</h2>
+          
           <h3>Old habits die hard</h3>
             <p class="text">
-                <blockquote>New compilers have bugs.</blockquote>
-                <blockquote>Modern C++ is juste more complex for no benefit.</blockquote>
-                <blockquote>Clang is slow and doesn't optimize well.</blockquote>
-                <blockquote>GCC generates the best output with `-march=nocona`</blockquote>
+              <ul>
+                <li><q>New compilers have bugs.</q></li>
+                <li><q>Modern C++ is juste more complex for no benefit.</q></li>
+                <li><q>Clang is slow and doesn't optimize well.</q></li>
+                <li><q>GCC generates the best output with `-march=nocona`</q></li>
+              </ul>
                 There are still large C++ projects stuck on whatever comes with RHEL 5 or 6 (gcc 4.4.X).
                 Anything below 4.8 is painful to use since it won't even implement most of C++11.
+                It would be nice to have a clear governance when it comes to language/implementation versions.
             </p>
           <h3>Cargo cults</h3>
+        
           <h3>Unsafe defaults</h3>
+        
           <h3>Distribution</h3>
+        
           <h3>Build tools</h3>
+        
           <h3>Debugging</h3>
             Debugging C++ can mean stepping through a large amount of boilerplate generic code and/or macros, espcially when using libraries like the STL and Boost.
             <div class="text">
@@ -50,7 +74,9 @@
                   <a href="https://twitter.com/ID_AA_Carmack/status/715293178249629696?ref_src=twsrc%5Etfw">March 30, 2016</a>
               </blockquote>
             </div>
+        
           <h3>Stealthy complexity</h3>
+        
           <h3>Concurrency/parallelism</h3>
           
           <h2>Conclusion</h2> <!-- Put at the beginning -->
