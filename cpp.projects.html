@@ -19,7 +19,7 @@
     	<div class="margin-left"></div>
     	<div class="content">
           <h2>In short</h2>
-            <p class="text">
+            <p class="fullwidth">
               I believe there is a very high variance in terms of code quality from one C++ code base to another.
               It's hard to know what to expect when joining a team that's writing C++ because it can fall anywhere
                 from `C with classes` to policy-based generic code that takes 45 minutes to build.
@@ -30,21 +30,21 @@
           <h2>I like</h2>
           
           <h3>Performance</h3>
-            <p class="text">
+            <p class="fullwidth">
               I feel like we get 80% of the performance for 20% of the effort.
               We can just write simple code, and modern compilers will find amazing ways to opimize it,
               and it's easy enough to measure and control memory allocations.
             </p>
 
           <h3>Libraries</h3>
-            <p class="text">
+            <p class="fullwidth">
                 The STL has a good selection of containers, algorithms, and type traits.
                 There are old, stable, and documented libraries like [Boost](), [QuickFIX](), [googletest]()...
                 There are new, good quality libraries for a number of common tasks, like [JSON](), [fmt](), [Catch2](), [](pyBind11)...
             </p>
 
           <h3>Tools</h3>
-            <p class="text">
+            <p class="fullwidth">
                 Compilers have improved warnings a lot, and sanitizers are very good at catching a number of bugs early on.
                 A simple CI setup can now help produce programs of a much higher quality than just a few years ago.
             </p>
@@ -54,13 +54,13 @@
           <h2>I don't like</h2>
           
           <h3>Old habits die hard</h3>
-            <ul class="text">
+            <ul class="fullwidth">
               <li><q>New compilers have bugs.</q></li>
               <li><q>Modern C++ is juste more complex for no benefit.</q></li>
               <li><q>Clang is slow and doesn't optimize well.</q></li>
               <li><q>GCC generates the best output with `-march=nocona`</q></li>
             </ul>
-            <p class="text">
+            <p class="fullwidth">
                 There are still large C++ projects stuck on whatever comes with RHEL 5 or 6 (gcc 4.4.X).
                 Anything below 4.8 is painful to use since it won't even implement most of C++11.
                 It would be nice to have a clear governance when it comes to language/implementation versions.
@@ -70,7 +70,7 @@
           <h3>Unsafe defaults</h3>
         
           <h3>Distribution</h3>
-            <p class="text">
+            <p class="fullwidth">
               It's not easy to distribute a C++ library, in particular across platforms.
             </p>
         
@@ -80,7 +80,7 @@
             <p class="text">
               Debugging C++ can mean stepping through a large amount of boilerplate generic code and/or macros, espcially when using libraries like the STL and Boost.
             </p>
-            <div class="text">
+            <div class="annotation">
               <blockquote class="twitter-tweet" data-lang="en">
                   <p lang="en" dir="ltr">
                       Modern C++ constructs like &quot;for (auto&amp; x : xs)&quot; look pretty, but they destroy the ability to single step in debug mode without template hell
@@ -91,7 +91,7 @@
             </div>
         
           <h3>Stealthy complexity</h3>
-            <p class="text">
+            <p class="fullwidth">
               There are many things that look simple but have hidden complexity or traps.
               For example, see this presentation on <a href="https://www.aristeia.com/TalkNotes/C++TypeDeductionandWhyYouCareCppCon2014.pdf">type deduction</a> by Scott Meyers.
               Let's not even start talking about templates.
