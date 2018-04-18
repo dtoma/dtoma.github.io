@@ -18,12 +18,21 @@
     	</header>
     	<div class="margin-left"></div>
     	<div class="content">
-          <h2>In short</h2> <!-- Put at the beginning -->
+          <h2>In short</h2>
+            <p class="text">
+              I believe there is a very high variance in terms of code quality from one C++ code base to another.
+              It's hard to know what to expect when joining a team that's writing C++ because it can fall anywhere
+                from `C with classes` to policy-based generic code that takes 45 minutes to build.
+              The language, tooling, and community have improved a lot since C++11, however I believe that C++ is not
+                a good tool for large projects in that it doesn't help users avoid mistakes and manage complexity.
+            </p>
+
           <h2>I like</h2>
+          
           <h3>Performance</h3>
             <p class="text">
               I feel like we get 80% of the performance for 20% of the effort.
-              Modern compilers will find amazing ways to opimize our code as long as it we don't make it a hairy mess,
+              We can just write simple code, and modern compilers will find amazing ways to opimize it,
               and it's easy enough to measure and control memory allocations.
             </p>
 
@@ -61,6 +70,9 @@
           <h3>Unsafe defaults</h3>
         
           <h3>Distribution</h3>
+            <p class="text">
+              It's not easy to distribute a C++ library, in particular across platforms.
+            </p>
         
           <h3>Build tools</h3>
         
@@ -79,6 +91,11 @@
             </div>
         
           <h3>Stealthy complexity</h3>
+            <p>
+              There are many things that look simple but have hidden complexity or traps.
+              For example, see this presentation on [type deduction](https://www.aristeia.com/TalkNotes/C++TypeDeductionandWhyYouCareCppCon2014.pdf) by Scott Meyers.
+              Let's not even start talking about templates.
+            </p>
         
           <h3>Concurrency/parallelism</h3>
         </div>
