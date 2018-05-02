@@ -56,7 +56,25 @@
                 A simple CI setup can now help produce programs of a much higher quality than just a few years ago.
             </p>
             <p class="annotation">
-                <img src="cpp-sample1.png" />
+                <pre>
+#include <cstdio>
+#include <algorithm>
+#include <vector>
+
+void print(int f) {
+    printf("%i", f);
+}
+
+int main() {
+    print(.2f);
+}
+
+// Output:
+<source>: In function 'int main()':
+<source>:12:11: warning: conversion from 'float' to 'int' changes value from '2.00000003e-1f' to '0' [-Wfloat-conversion]
+     print(.2f);
+           ^~~
+                </pre>
             </p>
             
           <h3>Best practices</h3>
