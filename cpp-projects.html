@@ -52,7 +52,7 @@
 
           <h3>Tools</h3>
             <p class="text">
-                Compilers have improved warnings a lot, and sanitizers are very good at catching a number of bugs early on.
+                Compilers have improved warnings a lot, and sanitizers are very good at catching a number of bugs early on.<br />
                 A simple CI setup can now help produce programs of a much higher quality than just a few years ago.
             </p>
             <div class="annotation">
@@ -70,8 +70,8 @@ int main() {
 }
 
 // Output:
-<source>: In function 'int main()':
-<source>:12:11: warning: conversion from 'float' to 'int' changes value from '2.00000003e-1f' to '0' [-Wfloat-conversion]
+file.cpp: In function 'int main()':
+file.cpp:12:11: warning: conversion from 'float' to 'int' changes value from '2.00000003e-1f' to '0' [-Wfloat-conversion]
      print(.2f);
            ^~~
                 </pre>
