@@ -69,7 +69,7 @@
                 A simple CI setup can now help produce programs of a much higher quality than just a few years ago.
             </p>
             <div class="annotation">
-                <pre>
+                <code>
 #include <cstdio>
 #include <algorithm>
 #include <vector>
@@ -87,7 +87,7 @@ file.cpp: In function 'int main()':
 file.cpp:12:11: warning: conversion from 'float' to 'int' changes value from '2.00000003e-1f' to '0' [-Wfloat-conversion]
      print(.2f);
            ^~~
-                </pre>
+                </code>
             </div>
             <p class="fullwidth">
                 <i>[add an example of a sanitizer finding an error]</i>
@@ -112,8 +112,8 @@ file.cpp:12:11: warning: conversion from 'float' to 'int' changes value from '2.
 
           <h3>Cargo cults</h3>
             <ul class="fullwidth">
-              <li><q>Build with <pre>-O2</pre>, <pre>-O3</pre> will introduce bugs.</q></li>
-              <li><q><pre>-Wall</pre> turns on all warnings.</q></li>
+              <li><q>Build with <code>-O2</code>, <code>-O3</code> will introduce bugs.</q></li>
+              <li><q><code>-Wall</code> turns on all warnings.</q></li>
             </ul>
 
           <h3>Unsafe defaults</h3>
