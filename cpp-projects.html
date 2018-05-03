@@ -20,9 +20,9 @@
     	<div class="content">
           <h2>In short</h2>
             <p class="fullwidth">
-              I believe there is a very high variance in terms of code quality from one C++ code base to another.
+              I believe there is a very high variance in terms of code quality from one C++ code base to another.<br />
               It's hard to know what to expect when joining a team that's writing C++ because it can fall anywhere
-                from `C with classes` to policy-based generic code that takes 45 minutes to build.
+                from `C with classes` to policy-based generic code that takes 45 minutes to build.<br />
               The language, tooling, and community have improved a lot since C++11, however I believe that C++ is not
                 a good tool for large projects in that it doesn't help users avoid mistakes and manage complexity.
             </p>
@@ -32,8 +32,12 @@
           <h3>Performance</h3>
             <p class="fullwidth">
               I feel like we get 80% of the performance for 20% of the effort.
-              We can just write simple code, and modern compilers will find amazing ways to opimize it,
-              and it's easy enough to measure and control memory allocations.
+              We can just write simple code using the STL, and modern compilers will find amazing ways to opimize it
+                to a level of performance far superior to what we'd get from the equivalent python/ruby/etc.<br />
+              It's easy enough to measure and control memory allocations,
+                or use a different allocator -
+                either at the container level with the <a href="http://en.cppreference.com/w/cpp/concept/Allocator">STL's allocator API</a>,
+                or replacing the libc malloc with something like <a href="http://jemalloc.net/">jemalloc</a>.
             </p>
 
           <h3>Libraries</h3>
