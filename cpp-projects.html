@@ -14,7 +14,7 @@
     <body>
     	<div class="top"></div>
     	<header>
-        Large projects in C++
+        Large projects in C++ (Draft)
     	</header>
     	<div class="margin-left"></div>
     	<div class="content">
@@ -37,21 +37,30 @@
               It's easy enough to measure and control memory allocations,
                 or use a different allocator -
                 either at the container level with the <a href="http://en.cppreference.com/w/cpp/concept/Allocator">STL's allocator API</a>,
-                or replacing the libc malloc with something like <a href="http://jemalloc.net/">jemalloc</a>.
+                or replacing the libc malloc with something like <a href="http://jemalloc.net/">jemalloc</a>.<br />
+              <i>[add an asciinema of valgrind]<br />
+              [add a code sample of a C++17-style STL allocator that logs allocations]</i>
             </p>
 
           <h3>Libraries</h3>
             <p class="fullwidth">
                 The STL has a good selection of containers, algorithms, and type traits.
+            </p>
+            <p class="fullwidth">
                 There are old, stable, and documented libraries like
                   <a href="https://www.boost.org/">Boost</a>,
                   <a href="http://www.quickfixengine.org/">QuickFIX</a>,
-                  <a href="https://github.com/google/googletest">googletest</a>...<br />
+                  <a href="https://github.com/google/googletest">googletest</a>...
+            </p>
+            <p class="fullwidth">
                 There are new, good quality libraries for a number of common tasks, like
                   <a href="https://github.com/nlohmann/json">JSON</a>,
                   <a href="https://github.com/fmtlib/fmt">fmt</a>,
+                  <a href="https://github.com/gabime/spdlog">spdlog</a>,
                   <a href="https://github.com/catchorg/Catch2">Catch2</a>,
                   <a href="https://github.com/pybind/pybind11">pyBind11</a>...
+            <p class="fullwidth">
+                <i>[add a boost::asio echo server example, with logging and python binding]</i>
             </p>
 
           <h3>Tools</h3>
@@ -80,9 +89,12 @@ file.cpp:12:11: warning: conversion from 'float' to 'int' changes value from '2.
            ^~~
                 </pre>
             </div>
-            
+            <p class="fullwidth">
+                <i>[add an example of a sanitizer finding an error]</i>
+            </p>
+
           <h3>Best practices</h3>
-          
+
           <h2>I don't like</h2>
           
           <h3>Old habits die hard</h3>
@@ -97,10 +109,21 @@ file.cpp:12:11: warning: conversion from 'float' to 'int' changes value from '2.
                 Anything below 4.8 is painful to use since it won't even implement most of C++11.
                 It would be nice to have a clear governance when it comes to language/implementation versions.
             </p>
+
           <h3>Cargo cults</h3>
-        
+            <ul class="fullwidth">
+              <li><q>Build with <pre>-O2</pre>, <pre>-O3</pre> will introduce bugs.</q></li>
+              <li><q><pre>-Wall</pre> turns on all warnings.</q></li>
+            </ul>
+
           <h3>Unsafe defaults</h3>
-        
+            <ul class="fullwidth">
+              <li>Implicit type conversions</li>
+              <li>Mutable by default</li>
+              <li>Need to expliitely activate warnings</li>
+              <li>Unsafe strcpy/memcpy/etc.</li>
+            </ul>
+
           <h3>Distribution</h3>
             <p class="fullwidth">
               It's not easy to distribute a C++ library, in particular across platforms.
@@ -121,6 +144,9 @@ file.cpp:12:11: warning: conversion from 'float' to 'int' changes value from '2.
                   <a href="https://twitter.com/ID_AA_Carmack/status/715293178249629696?ref_src=twsrc%5Etfw">March 30, 2016</a>
               </blockquote>
             </div>
+            <p class="fullwidth">
+              <i>[Add an asciinema of stepping through a range-based for loop]</i>
+            </p>
         
           <h3>Stealthy complexity</h3>
             <p class="fullwidth">
