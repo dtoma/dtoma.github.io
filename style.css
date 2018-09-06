@@ -1,8 +1,10 @@
 /* Default/general styles */
 
 body {
-    font-family: "Helvetica", "Open Sans", Sans-Serif;
+    font-family: sans-serif;
     font-size: 100%;
+    line-height: 1.6rem;
+
     margin: 0px;
     padding: 0px;
     padding-bottom: 20px;
@@ -10,9 +12,11 @@ body {
 }
 
 .top {
+    padding: 6px;
     grid-area: top;
-    height: 1px;
-    background-color: black;
+    height: 3em;
+    line-height: 3em;
+    /* background-color: black; */
 }
 
 header {
@@ -27,6 +31,7 @@ header {
     font-size: 36px;
     color: white;
 
+    border-top: 1px solid black;
     border-bottom: 1px solid black;
 
     background: url(bkgrnd.png) no-repeat;
@@ -170,3 +175,15 @@ th, td {
     canvas { width: 100%; }
     th, td { padding: 15px; }
 }
+
+/* links.css - v0.0.1 - "Smarter defaults for links" License MIT
+ */
+a { -webkit-transition: color .4s; transition: color .4s; color: #265C83; }
+
+a:link, a:visited { color: #265C83; }
+
+a:hover { color: #7FDBFF; }
+
+a:active { -webkit-transition: color .3s; transition: color .3s; color: #007BE6; }
+
+.link { text-decoration: none; }
