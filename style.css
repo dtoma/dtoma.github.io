@@ -2,6 +2,7 @@
 
 body {
     font-family: "Helvetica", "Open Sans", Sans-Serif;
+    font-size: 100%;
     margin: 0px;
     padding: 0px;
     padding-bottom: 20px;
@@ -10,17 +11,28 @@ body {
 
 .top {
     grid-area: top;
-    height: 6px;
-    background-color: #8D3F20;
+    height: 1px;
+    background-color: black;
 }
 
 header {
     grid-area: header;
+
+    /* Make it big and center the text */
     text-align: center;
-    border-bottom: 1px solid #8D3F20;
+
+    /* Make the text look good*/
     text-transform: uppercase;
     letter-spacing: 1.4;
-    font-size: 24px;
+    font-size: 36px;
+    color: white;
+
+    border-bottom: 1px solid black;
+
+    background: url(bkgrnd.png) no-repeat;
+    background-position: center;
+    background-size: cover;
+
 }
 
 .margin-left { grid-area: margin-left; }
@@ -66,9 +78,9 @@ th, td {
 
 /* Responsive */
 
+/* Phone */
 @media only screen and (max-width: 759px) {
     body {
-        font-size: 14px;
         grid-template-columns: 1fr;
         grid-template-areas: "top"
                              "header"
@@ -77,6 +89,9 @@ th, td {
     header {
         padding: 24px;
         margin-bottom: 16px;
+        height: 3em;
+        line-height: 3em;
+
     }
     .content {
         grid-template-columns: 1fr;
@@ -94,9 +109,10 @@ th, td {
     th, td { padding: 5px; }
 }
 
+/* Tablet */
 @media only screen and (min-width: 760px) and (max-width: 1199px) {
     body {
-        font-size: 16px;
+        font-size: 110%;
         grid-template-columns: 1fr;
         grid-template-areas: "top"
                              "header"
@@ -105,6 +121,8 @@ th, td {
     header {
         padding: 24px;
         margin-bottom: 16px;
+        height: 4em;
+        line-height: 4em;
     }
     .content {
         grid-template-columns: 1fr;
@@ -122,9 +140,10 @@ th, td {
     th, td { padding: 10px; }
 }
 
+/* Desktop */
 @media only screen and (min-width: 1200px) {
     body {
-        font-size: 16px;
+        font-size: 115%;
         grid-template-columns: 1fr 3fr 1fr;
         grid-template-areas: "top top top"
                              "header header header"
@@ -133,6 +152,8 @@ th, td {
     header {
         padding: 24px;
         margin-bottom: 16px;
+        height: 6em;
+        line-height: 6em;
     }
     .content {
         grid-template-columns: 1fr 1fr 1fr;
