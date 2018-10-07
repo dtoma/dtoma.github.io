@@ -19,10 +19,10 @@ _store
 _site
 
 # Rest of the file: ignore examples
-web/_cache
-web/_site
-web/site
-web/reference
+*/_cache
+*/_site
+*/site
+*/reference
 
 # This is generated from the CHANGELOG
-web/releases.markdown
+*/releases.markdown
