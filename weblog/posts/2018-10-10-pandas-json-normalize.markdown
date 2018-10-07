@@ -1,6 +1,7 @@
 ---
 title: Pandas' json_normalize
 author: me
+pagename: Pandas & JSON
 ---
 
 [Documentation page](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.io.json.json_normalize.html)
