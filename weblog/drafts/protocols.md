@@ -1,7 +1,13 @@
-# X Macros
+# Working with protocols
+
+Useful bits of code when working with text or binary protocols.
+
+## X Macros
+
+Easily convert an enum value to a string, eg. when displaying feedback for a user.
 
 ```c++
-#define MESSAGE_TYPE \
+#define FOR_ALL_MESSAGE_TYPE(X) \
     X('0', Heartbeat) \
     X('1', TestRequest) \
     X('2', ResendRequest) \
@@ -22,18 +28,18 @@
     X('H', OrderStatusRequest)
 
 
-#define X(code, name) name = code,
+#define ENUMIFY(code, name) name = code,
 enum class MessageType: char {
-    MESSAGE_TYPE
+    FOR_ALL_MESSAGE_TYPE(ENUMIFY)
 };
 #undef X
 
 auto message_type_to_str(MessageType message_type) {
-    #define X(code, name) case MessageType::name: return #name; break;
+    #define CASEIFY(code, name) case MessageType::name: return #name; break;
     switch (message_type) {
-        MESSAGE_TYPE
+        FOR_ALL_MESSAGE_TYPE(CASEIFY)
     }
-    #undef X
+    #undef CASEIFY
     return "";
 }
 ```
@@ -104,3 +110,65 @@ $> g++ xmacros.cpp
 $> ./a.out 
 Reject
 ```
+
+## static_assert
+
+If we pack our `struct`s, this works fine:
+
+```cpp
+#pragma pack(1)
+
+struct Header {
+    char MessageType;
+};
+
+struct Reject {
+    Header header;
+    int OrderId;
+};
+
+static_assert(sizeof(Reject) == 5, "Unexpected Reject struct size");
+
+int main() {
+    return sizeof(Reject);
+}
+```
+
+If we had forgotten to use the right pragma, or omitted a field in the message, we'd have a compilation error:
+
+```
+$> clang staticassert.cpp
+<source>:10:1: error: static_assert failed "Unexpected Reject struct size"
+
+static_assert(sizeof(Reject) == 5, "Unexpected Reject struct size");
+
+^             ~~~~~~~~~~~~~~~~~~~
+
+1 error generated.
+```
+
+We can use X macros to generate all the checks for our messages:
+
+```c++
+#pragma pack(1)
+
+#define FOR_ALL_MESSAGE_TYPE(X) \
+    X('3', Reject, 4)
+    // etc.
+
+struct Header {
+    char MessageType;
+};
+
+struct Reject {
+    Header header;
+    int OrderId;
+};
+
+#define ASSERT_SIZE(code, name, size) \
+    static_assert(sizeof(name) == size + sizeof(Header), "Unexpected "#name" struct size");
+FOR_ALL_MESSAGE_TYPE(ASSERT_SIZE)
+#undef ASSERT_SIZE
+```
+
+## Hexdump
