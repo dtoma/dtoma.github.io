@@ -1,4 +1,4 @@
-/* Todo 
+/* Todo
 
 - Code blocks should be scrolling instead of wrapping
 - Header text should wrap on mobile/tablet
@@ -17,8 +17,7 @@ body {
     display: grid;
 }
 
-.top {
-}
+.top {}
 
 header {
     grid-area: header;
@@ -29,15 +28,9 @@ header {
     /* Make the text look good*/
     text-transform: uppercase;
     letter-spacing: 1.4;
-    color: white;
 
     border-top: 1px solid black;
     border-bottom: 1px solid black;
-
-    background: url('/images/bkgrnd.png') no-repeat;
-    background-position: center;
-    background-size: cover;
-
 }
 
 .margin-left { grid-area: margin-left; }
@@ -156,9 +149,9 @@ canvas { width: 100%; }
     header {
         padding: 24px;
         margin-bottom: 16px;
-        height: 6em;
-        line-height: 6em;
-        font-size: 3rem;
+        height: 3em;
+        line-height: 3em;
+        font-size: 1rem;
     }
     .content {
         grid-template-columns: 1fr 1fr 1fr;
