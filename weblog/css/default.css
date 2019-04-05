@@ -17,22 +17,6 @@ body {
     display: grid;
 }
 
-.top {}
-
-header {
-    grid-area: header;
-
-    /* Make it big and center the text */
-    text-align: center;
-
-    /* Make the text look good*/
-    text-transform: uppercase;
-    letter-spacing: 1.4;
-
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-}
-
 .margin-left { grid-area: margin-left; }
 .margin-right { grid-area: margin-right; }
 .content {
@@ -42,14 +26,7 @@ header {
 
 /* Headers */
 
-header, h1, h2, h3, h4, h5 { font-family: serif; }
-
-h1 { font-size: 5rem; }
-h2 { font-size: 2rem; }
-h3 { font-size: 1.8rem; }
-
-.content h1 { border-bottom: 1px solid #8D3F20; }
-.content h2 { border-bottom: 1px solid #8D3F20; }
+h1, h2, h3, h4, h5 { font-family: serif; }
 
 /* Links */
 
@@ -79,9 +56,7 @@ canvas { width: 100%; }
 @media only screen and (max-width: 759px) {
     body {
         grid-template-columns: 1fr;
-        grid-template-areas: "top"
-                             "header"
-                             "content";
+        grid-template-areas: "content";
     }
     h1 { font-size: 2.2rem; }
     h2 { font-size: 1.8rem; }
@@ -108,9 +83,7 @@ canvas { width: 100%; }
     body {
         font-size: 110%;
         grid-template-columns: 1fr;
-        grid-template-areas: "top"
-                             "header"
-                             "content";
+        grid-template-areas: "content";
     }
     header {
         padding: 24px;
@@ -134,9 +107,7 @@ canvas { width: 100%; }
     body {
         font-size: 115%;
         grid-template-columns: 1fr 3fr 1fr;
-        grid-template-areas: "top top top"
-                             "header header header"
-                             "margin-left content margin-right";
+        grid-template-areas: "margin-left content margin-right";
     }
     header {
         padding: 24px;
