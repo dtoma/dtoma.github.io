@@ -1,7 +1,6 @@
 ---
 title: Pandas & JSON
 author: me
-pagename: Pandas & JSON
 ---
 
 json_normalize
