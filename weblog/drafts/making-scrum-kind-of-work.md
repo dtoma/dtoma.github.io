@@ -3,6 +3,7 @@
 Key points:
 - Estimates aren't exact
 - Velocity isn't constant
+- Product owner is critical
 - Different folks, different strokes
 - Virtuous feedback loop
 - It's also technical
@@ -36,6 +37,8 @@ In the team mentioned above, after a few months we changed our baseline from 5 p
 1. deeper knowledge of our (legacy) code base
 2. improved automated testing
 3. more consistent coding standards thanks to code review
+
+## Product owner is critical
 
 ## Different folks, different strokes
 
