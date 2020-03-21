@@ -3,12 +3,14 @@ title: Pytest cheatsheet
 author: me
 ---
 
+Some notes about the features I use the most from [pytest](https://docs.pytest.org/en/latest/).
+
 ## SetUp/TearDown
 
 We can use `yield` in pytest fixtures to emulate class-based tests SetUp/TearDown methods.
 It works particularly well with decorators - the example below will run `test_foo` with a patched `module.function`, then reset the patched function after the test finishes:
 
-```
+```python
 from unittest.mock import patch
 import pytest
 
@@ -23,11 +25,37 @@ def test_foo():
     assert module.function() == 42
 ```
 
+
+## Fixtures scope and autouse
+
+Fixtures can have a scope that is one of:
+- function
+- class
+- module
+- package
+- session (the whole test run)
+
+With the `autouse` parameter, we can automatically load a function for all the tests in a module, for example:
+
+```python
+from mymodels import SomeModel
+
+@django_db
+@pytest.fixture(scope='module', autouse=True)
+def fixture_populate_database():
+    SomeModel.objects.create(foo='Bar')
+
+def test_foo_is_bar():
+    assert list(SomeModel.objects.values_list('foo')) == ['bar']
+```
+
+Sadly, we can't use session-level fixtures that require a database access. There is a [GitHub issue](https://github.com/pytest-dev/pytest-django/issues/514) open.
+
 ## Testing logs
 
 We can use the `caplog` fixture, then filter its output:
 
-```
+```python
 def test_my_logs(caplog):
     fixture = some_fixture()
 
@@ -51,4 +79,22 @@ def test_my_logs(caplog):
         'second_message',
         'third_message: %d' % fixture.id,
     ]
+```
+
+## Parametrized tests
+
+It can be useful to run a single test over multiple inputs. Using the `parametrize` decorator,
+we can list inputs that we expect to succeed or fail.
+
+```python
+@pytest.mark.parametrize(
+    "test_input,expected",
+    [
+        ("3+5", 8),
+        ("2+4", 6),
+        pytest.param("6*9", 42, marks=pytest.mark.xfail)
+    ],
+)
+def test_eval(test_input, expected):
+    assert eval(test_input) == expected
 ```

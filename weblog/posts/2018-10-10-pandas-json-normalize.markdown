@@ -59,6 +59,7 @@ df = df.rename(columns={'daily_purchases.user_id': 'user_id'})
 5   42.1     555.0     5565  2016-01-02
 ```
 
-[1] Here we pass a list of strings to be used as nested keys - we want data in `dict['daily_purchases']['ticket_purchases']`.
+[1] Here we pass a list of strings to be used as nested keys - we want data in `dict['daily_purchases']['ticket_purchases']`. This gives us the columns `price` and `quantity`.
 
-[2] We can also use a nested list here to select columns from nested objects
+[2] We can also use a nested list here to select columns from nested objects. In our example, this
+gives us the columns `date` and `user_id`.

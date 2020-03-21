@@ -7,15 +7,28 @@ author: me
 
 ### Roger LOWENSTEIN - When Genius Failed - The Rise and Fall of Long-Term Capital Management
 
-A book about the rise and fall of [Long-Term Capital Management](https://en.wikipedia.org/wiki/Long-Term_Capital_Management). I thought it was interesting to see famous academics joining the team to confront their theories to the reality of the markets. Many famous names in the book. The narration is a bit slow, it could have been a few pages shorter, but overall interesting and entertaining.
+A book about the rise and fall of [Long-Term Capital Management](https://en.wikipedia.org/wiki/Long-Term_Capital_Management), a hedge fund from the 1990s. I thought it was interesting to see famous academics joining the team to confront their theories to the reality of the markets. Many famous names in the book. The narration is a bit slow, it could have been a few pages shorter, but overall interesting and entertaining. Key takeaways:
+- Black swans happen, and aren't always covered or anticipated by academics
+- The more leverage we have, the more we need to prepare for unlikely events
+- When things get bad enough, governments and banks can work together to avoid worst-case scenarios
 
 ### Haruki MURAKAMI - Men Without Women
 
-A collection of short stories, reminded me of "Je voudrais que quelqu'un m'attende quelque part" from Anna Gavalda. All the stories' endings are very open to interpretation, somewhat bittersweet. A good quick read.
+A collection of short stories, reminded me of "Je voudrais que quelqu'un m'attende quelque part" from Anna Gavalda. The stories are slices of life, each one about a man's relationship with a woman. The endings are very open to interpretation, somewhat bittersweet.
+
+A good quick read.
 
 ### John BOGLE - The Little Book of Common Sense Investing
 
-A short book with lots of diagrams showing why it can make sense to invest in ETFs rather than active funds. Clear and easy to follow.
+A short book with lots of diagrams showing why it can make sense to invest in ETFs rather than active funds. Clear and easy to follow. Two points that summarize this book, in my opinion:
+1. Few active money managers beat the market
+2. If you are paying management fees of `n`, then your active money manager has to provide returns of `the market + n` to be worth it for you
+
+In my opinion, everyone high school or university student should read this, so they can get a basic idea of what to do with their money once they start earning some.
+
+### Jim BUTCHER - The Dresden Files, books 1 to 15
+
+Harry Dresden is the only wizard detective of Chicago. He's a confident idiot who wields both revolvers and fireballs (and sarcasm). As he investigates a series of homicides, he ends up in more trouble he could ever have imagined. As the series goes on, the main character learns a lot and matures along the way, makes friends, loses friends. Very entertaining!
 
 ### Lee CHILD - Killing Floor
 
@@ -25,3 +38,10 @@ First book of the Jack Reacher series. First person narration, lots of short sen
 
 Second book of the Jack Reacher series. Third person narration, we have to follow multiple characters at the same time, which didn't flow as nicely as the first book IMO. Definitely Jason Bourne on steroids.
 
+## Lee CHILD - Jack Reacher, books 3 to 10
+
+All easy and entertaining reads. Plots are okay, lots of action, a few side stories along the way to keep the main character interesting. Will read more of this series.
+
+### Brandon SANDERSON - The Mistborn Trilogy
+
+In a world where people can eat metals to gain magical powers, a young woman goes from beggar to hero when she discovers her own rare and powerful abilities. I loved the first tome, liked the second one, and bore through the third one. I felt that it started off full of action, new ideas, punchy dialogue, and slowly became slower, more depressing, with a lot of inner dialogue from multiple characters towards the end. I guess since the end of the world is coming, it makes sense to change the mood of the characters accordingly, I just had a hard time finishing it. I was also not a fan of the end, which felt a bit like a Deus Ex Machina. Overall worth a read.
