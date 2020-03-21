@@ -12,17 +12,19 @@ To transform nested JSON into a DataFrame, we can use `json_normalize` to descri
 The official documentation is not very clear on how to select data from nested dicts.
 For example we have the following data:
 
-```
+```python
 [
   { 'date': '2016-01-01',
     'daily_purchases': [
         { 'user_id': 4242,
           'ticket_purchases': [
-            { 'quantity': 35, 'price': 42.0 }, { 'quantity': 1337, 'price': 42.1 }]
+            { 'quantity': 35, 'price': 42.0 },
+            { 'quantity': 1337, 'price': 42.1 }]
         },
         { 'user_id': 5565,
           'ticket_purchases': [
-            { 'quantity': 666.0, 'price': 42.0 }, { 'quantity': 555.0, 'price': 42.1 }]
+            { 'quantity': 666.0, 'price': 42.0 },
+            { 'quantity': 555.0, 'price': 42.1 }]
         }
     ]
   },
@@ -30,7 +32,8 @@ For example we have the following data:
     'daily_purchases': [
       { 'user_id': 5565,
         'ticket_purchases': [
-          { 'quantity': 666.0, 'price': 42.0 }, { 'quantity': 555.0, 'price': 42.1 }]
+          { 'quantity': 666.0, 'price': 42.0 },
+          { 'quantity': 555.0, 'price': 42.1 }]
       }
     ]
   },
