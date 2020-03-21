@@ -5,12 +5,12 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Pytest cheatsheet</title>
-        <link rel="stylesheet" href="../css/default.css" />
+        <!-- <link rel="stylesheet" href="/css/default.css" /> -->
+        <link rel="stylesheet" href="../css/code.css" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     </head>
     <body>
-        <div class="margin-left"></div>
-
-        <div class="content">
+        <div class="container">
             <a href="../">&larr; Home</a>
 <div class="fullwidth">
     Posted on April  5, 2019
@@ -19,50 +19,73 @@
     
 </div>
 
+<p>Some notes about the features I use the most from <a href="https://docs.pytest.org/en/latest/">pytest</a>.</p>
 <h2 id="setupteardown">SetUp/TearDown</h2>
 <p>We can use <code>yield</code> in pytest fixtures to emulate class-based tests SetUp/TearDown methods. It works particularly well with decorators - the example below will run <code>test_foo</code> with a patched <code>module.function</code>, then reset the patched function after the test finishes:</p>
-<pre><code>from unittest.mock import patch
-import pytest
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">from</span> unittest.mock <span class="im">import</span> patch
+<span class="im">import</span> pytest
 
-@pytest.fixture
-def my_fixture():
-    with patch('module.function', return_value=42)
-        yield
+<span class="at">@pytest.fixture</span>
+<span class="kw">def</span> my_fixture():
+    <span class="cf">with</span> patch(<span class="st">'module.function'</span>, return_value<span class="op">=</span><span class="dv">42</span>)
+        <span class="cf">yield</span>
 
-@pytest.mark.usefixtures('my_fixture')
-def test_foo():
-    import module
-    assert module.function() == 42</code></pre>
+<span class="at">@pytest.mark.usefixtures</span>(<span class="st">'my_fixture'</span>)
+<span class="kw">def</span> test_foo():
+    <span class="im">import</span> module
+    <span class="cf">assert</span> module.function() <span class="op">==</span> <span class="dv">42</span></code></pre></div>
+<h2 id="fixtures-scope-and-autouse">Fixtures scope and autouse</h2>
+<p>Fixtures can have a scope that is one of: - function - class - module - package - session (the whole test run)</p>
+<p>With the <code>autouse</code> parameter, we can automatically load a function for all the tests in a module, for example:</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">from</span> mymodels <span class="im">import</span> SomeModel
+
+<span class="at">@django_db</span>
+<span class="at">@pytest.fixture</span>(scope<span class="op">=</span><span class="st">'module'</span>, autouse<span class="op">=</span><span class="va">True</span>)
+<span class="kw">def</span> fixture_populate_database():
+    SomeModel.objects.create(foo<span class="op">=</span><span class="st">'Bar'</span>)
+
+<span class="kw">def</span> test_foo_is_bar():
+    <span class="cf">assert</span> <span class="bu">list</span>(SomeModel.objects.values_list(<span class="st">'foo'</span>)) <span class="op">==</span> [<span class="st">'bar'</span>]</code></pre></div>
+<p>Sadly, we can’t use session-level fixtures that require a database access. There is a <a href="https://github.com/pytest-dev/pytest-django/issues/514">GitHub issue</a> open.</p>
 <h2 id="testing-logs">Testing logs</h2>
 <p>We can use the <code>caplog</code> fixture, then filter its output:</p>
-<pre><code>def test_my_logs(caplog):
-    fixture = some_fixture()
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="kw">def</span> test_my_logs(caplog):
+    fixture <span class="op">=</span> some_fixture()
 
-    assert some_function() == some_result
+    <span class="cf">assert</span> some_function() <span class="op">==</span> some_result
 
-    # filter by level
-    info_logs = (
+    <span class="co"># filter by level</span>
+    info_logs <span class="op">=</span> (
         logger, line
-        for logger, level, line in caplog.record_tuples
-        if level == logging.INFO)
+        <span class="cf">for</span> logger, level, line <span class="kw">in</span> caplog.record_tuples
+        <span class="cf">if</span> level <span class="op">==</span> logging.INFO)
 
-    # filter by logger
-    some_function_logs = (
+    <span class="co"># filter by logger</span>
+    some_function_logs <span class="op">=</span> (
         logger, line
-        for logger, level, line in caplog.record_tuples
-        if logger == 'some_module.some_function')
+        <span class="cf">for</span> logger, level, line <span class="kw">in</span> caplog.record_tuples
+        <span class="cf">if</span> logger <span class="op">==</span> <span class="st">'some_module.some_function'</span>)
 
-    # assert the logs are what we expected
-    assert list(line for _, line in info_logs) == [
-        'first message',
-        'second_message',
-        'third_message: %d' % fixture.id,
-    ]</code></pre>
+    <span class="co"># assert the logs are what we expected</span>
+    <span class="cf">assert</span> <span class="bu">list</span>(line <span class="cf">for</span> _, line <span class="kw">in</span> info_logs) <span class="op">==</span> [
+        <span class="st">'first message'</span>,
+        <span class="st">'second_message'</span>,
+        <span class="st">'third_message: </span><span class="sc">%d</span><span class="st">'</span> <span class="op">%</span> fixture.<span class="bu">id</span>,
+    ]</code></pre></div>
+<h2 id="parametrized-tests">Parametrized tests</h2>
+<p>It can be useful to run a single test over multiple inputs. Using the <code>parametrize</code> decorator, we can list inputs that we expect to succeed or fail.</p>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="at">@pytest.mark.parametrize</span>(
+    <span class="st">&quot;test_input,expected&quot;</span>,
+    [
+        (<span class="st">&quot;3+5&quot;</span>, <span class="dv">8</span>),
+        (<span class="st">&quot;2+4&quot;</span>, <span class="dv">6</span>),
+        pytest.param(<span class="st">&quot;6*9&quot;</span>, <span class="dv">42</span>, marks<span class="op">=</span>pytest.mark.xfail)
+    ],
+)
+<span class="kw">def</span> test_eval(test_input, expected):
+    <span class="cf">assert</span> <span class="bu">eval</span>(test_input) <span class="op">==</span> expected</code></pre></div>
 
         </div>
-
-        <div class="margin-right"></div>
-
         <!--[if lte IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
