@@ -5,60 +5,52 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Pandas & JSON</title>
-        <!-- <link rel="stylesheet" href="/css/default.css" /> -->
+        <link rel="stylesheet" href="../css/bootstrap-reboot.min.css" />
+        <link rel="stylesheet" href="../css/bootstrap-grid.min.css" />
+        <link rel="stylesheet" href="../css/default.css" />
         <link rel="stylesheet" href="../css/code.css" />
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     </head>
     <body>
         <div class="container">
-            <a href="../">&larr; Home</a>
-<div class="fullwidth">
-    Posted on October 10, 2018
-    
-        by me
-    
-</div>
-
-<h2 id="json_normalize">json_normalize</h2>
+            <header class="py-3 col-12">
+                <a href="../">Home Page</a>
+            </header>
+            <div class="row">
+                <div class="col-9">
+                    <h1 id="json_normalize">json_normalize</h1>
 <p><a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.io.json.json_normalize.html">Documentation page</a></p>
 <p>To transform nested JSON into a DataFrame, we can use <code>json_normalize</code> to describe how to unwrap the object. The official documentation is not very clear on how to select data from nested dicts. For example we have the following data:</p>
-<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">[
-  { <span class="st">'date'</span>: <span class="st">'2016-01-01'</span>,
-    <span class="st">'daily_purchases'</span>: [
-        { <span class="st">'user_id'</span>: <span class="dv">4242</span>,
-          <span class="st">'ticket_purchases'</span>: [
-            { <span class="st">'quantity'</span>: <span class="dv">35</span>, <span class="st">'price'</span>: <span class="fl">42.0</span> },
-            { <span class="st">'quantity'</span>: <span class="dv">1337</span>, <span class="st">'price'</span>: <span class="fl">42.1</span> }]
-        },
-        { <span class="st">'user_id'</span>: <span class="dv">5565</span>,
-          <span class="st">'ticket_purchases'</span>: [
-            { <span class="st">'quantity'</span>: <span class="fl">666.0</span>, <span class="st">'price'</span>: <span class="fl">42.0</span> },
-            { <span class="st">'quantity'</span>: <span class="fl">555.0</span>, <span class="st">'price'</span>: <span class="fl">42.1</span> }]
-        }
-    ]
-  },
-  { <span class="st">'date'</span>: <span class="st">'2016-01-02'</span>,
-    <span class="st">'daily_purchases'</span>: [
-      { <span class="st">'user_id'</span>: <span class="dv">5565</span>,
-        <span class="st">'ticket_purchases'</span>: [
-          { <span class="st">'quantity'</span>: <span class="fl">666.0</span>, <span class="st">'price'</span>: <span class="fl">42.0</span> },
-          { <span class="st">'quantity'</span>: <span class="fl">555.0</span>, <span class="st">'price'</span>: <span class="fl">42.1</span> }]
-      }
-    ]
-  },
-]</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python">[{
+  <span class="st">'date'</span>: <span class="st">'2016-01-01'</span>,
+  <span class="st">'daily_purchases'</span>: [{
+    <span class="st">'user_id'</span>: <span class="dv">4242</span>,
+    <span class="st">'ticket_purchases'</span>: [
+      { <span class="st">'quantity'</span>: <span class="dv">35</span>, <span class="st">'price'</span>: <span class="fl">42.0</span> },
+      { <span class="st">'quantity'</span>: <span class="dv">1337</span>, <span class="st">'price'</span>: <span class="fl">42.1</span> }]}, {
+    <span class="st">'user_id'</span>: <span class="dv">5565</span>,
+    <span class="st">'ticket_purchases'</span>: [
+      { <span class="st">'quantity'</span>: <span class="fl">666.0</span>, <span class="st">'price'</span>: <span class="fl">42.0</span> },
+      { <span class="st">'quantity'</span>: <span class="fl">555.0</span>, <span class="st">'price'</span>: <span class="fl">42.1</span> }]}
+  ]}, {
+  <span class="st">'date'</span>: <span class="st">'2016-01-02'</span>,
+  <span class="st">'daily_purchases'</span>: [{
+    <span class="st">'user_id'</span>: <span class="dv">5565</span>,
+    <span class="st">'ticket_purchases'</span>: [
+      { <span class="st">'quantity'</span>: <span class="fl">666.0</span>, <span class="st">'price'</span>: <span class="fl">42.0</span> },
+      { <span class="st">'quantity'</span>: <span class="fl">555.0</span>, <span class="st">'price'</span>: <span class="fl">42.1</span> }]}]
+}]</code></pre></div>
 <p>We can get a flat DataFrame with the purchase data per user in one function call:</p>
-<pre><code>import pandas as pd
+<div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">import</span> pandas <span class="im">as</span> pd
 
-df = pd.io.json.json_normalize(
-     data=data,                                            # dict-like object
-     record_path=['daily_purchases', 'ticket_purchases'],  # the path to the data [1]
-     meta=['date', ['daily_purchases', 'user_id']]         # the columns we want [2]
+df <span class="op">=</span> pd.io.json.json_normalize(
+     data<span class="op">=</span>data,                                            <span class="co"># dict-like object</span>
+     record_path<span class="op">=</span>[<span class="st">'daily_purchases'</span>, <span class="st">'ticket_purchases'</span>],  <span class="co"># the path to the data [1]</span>
+     meta<span class="op">=</span>[<span class="st">'date'</span>, [<span class="st">'daily_purchases'</span>, <span class="st">'user_id'</span>]]         <span class="co"># metadata for each record [2]</span>
 )
 
-df = df.rename(columns={'daily_purchases.user_id': 'user_id'})
-
-   price  quantity  user_id        date
+df <span class="op">=</span> df.rename(columns<span class="op">=</span>{<span class="st">'daily_purchases.user_id'</span>: <span class="st">'user_id'</span>})</code></pre></div>
+<p>The DataFrame will look like below:</p>
+<pre><code>   price  quantity  user_id        date
 0   42.0      35.0     4242  2016-01-01
 1   42.1    1337.0     4242  2016-01-01
 2   42.0     666.0     5565  2016-01-01
@@ -68,6 +60,10 @@ df = df.rename(columns={'daily_purchases.user_id': 'user_id'})
 <p>[1] Here we pass a list of strings to be used as nested keys - we want data in <code>dict['daily_purchases']['ticket_purchases']</code>. This gives us the columns <code>price</code> and <code>quantity</code>.</p>
 <p>[2] We can also use a nested list here to select columns from nested objects. In our example, this gives us the columns <code>date</code> and <code>user_id</code>.</p>
 
+                </div>
+                <div class="col-3"></div>
+            </div>
+            <footer class="py-3"></footer>
         </div>
         <!--[if lte IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
