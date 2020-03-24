@@ -1,3 +1,7 @@
+---
+title: Big Projects in C++
+---
+
 # Large projects in C++ (Draft)
 
 ## In short
@@ -29,20 +33,19 @@ The STL has a good selection of containers, algorithms, and type traits.
 
 
 There are old, stable, and documented libraries like
-  Boost,
-  QuickFIX,
-  googletest...
+- Boost
+- QuickFIX
+- googletest
 
 
 There are new, good quality libraries for a number of common tasks, like
-  JSON,
-  fmt,
-  spdlog,
-  Catch2,
-  pyBind11...
+- JSON
+- fmt
+- spdlog
+- Catch2
+- pyBind11
 
 [add a boost::asio echo server example, with logging and python binding]
-  
 
 ### Tools
   
@@ -77,19 +80,19 @@ file.cpp:12:11: warning: conversion from 'float' to 'int' changes value from '2.
 
 ### Best practices
 
+[add something about the GSL]
+[books by Meyers, Alexandrescu, Sutter...]
+
 ## I don't like
 
 ### Old habits die hard
 
 Things I've heard from senior managers and tech leads:
 
-> New compilers have bugs.
->
-> Modern C++ is juste more complex for no benefit.
->
-> Clang is slow and doesn't optimize well.
->
-> GCC generates the best output with `-march=nocona`
+- New compilers have bugs
+- Modern C++ is juste more complex for no benefit
+- Clang is slow and doesn't optimize well
+- GCC generates the best output with `-march=nocona`
 
 There are still large C++ projects stuck on whatever comes with RHEL 5 or 6 (gcc 4.4.X).
 Anything below 4.8 is painful to use since it won't even implement most of C++11.
@@ -97,9 +100,8 @@ It would be nice to have a clear governance when it comes to language/implementa
 
 ### Cargo cults
 
-> Build with -O2, -O3 will introduce bugs.
->
-> -Wall turns on all warnings.
+- Build with `-O2`, `-O3` will introduce bugs.
+- `-Wall` turns on all warnings.
 
 
 ### Unsafe defaults
@@ -132,7 +134,11 @@ The famous John Carmack's tweet summarizes this:
 ## Stealthy complexity
 
 There are many things that look simple but have hidden complexity or traps.
+
 For example, see this presentation on type deduction by Scott Meyers.
+
+[cppreference.com/implicit_conversion](https://en.cppreference.com/w/cpp/language/implicit_conversion)
+
 Let's not even start talking about templates.
 
 ## Concurrency/parallelism
