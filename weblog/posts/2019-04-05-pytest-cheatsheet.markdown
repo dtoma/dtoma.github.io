@@ -25,7 +25,6 @@ def test_foo():
     assert module.function() == 42
 ```
 
-
 ## Fixtures scope and autouse
 
 Fixtures can have a scope that is one of:

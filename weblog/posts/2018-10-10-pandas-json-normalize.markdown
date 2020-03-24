@@ -3,8 +3,7 @@ title: Pandas & JSON
 author: me
 ---
 
-json_normalize
---------------
+# json_normalize
 
 [Documentation page](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.io.json.json_normalize.html)
 
@@ -13,46 +12,44 @@ The official documentation is not very clear on how to select data from nested d
 For example we have the following data:
 
 ```python
-[
-  { 'date': '2016-01-01',
-    'daily_purchases': [
-        { 'user_id': 4242,
-          'ticket_purchases': [
-            { 'quantity': 35, 'price': 42.0 },
-            { 'quantity': 1337, 'price': 42.1 }]
-        },
-        { 'user_id': 5565,
-          'ticket_purchases': [
-            { 'quantity': 666.0, 'price': 42.0 },
-            { 'quantity': 555.0, 'price': 42.1 }]
-        }
-    ]
-  },
-  { 'date': '2016-01-02',
-    'daily_purchases': [
-      { 'user_id': 5565,
-        'ticket_purchases': [
-          { 'quantity': 666.0, 'price': 42.0 },
-          { 'quantity': 555.0, 'price': 42.1 }]
-      }
-    ]
-  },
-]
+[{
+  'date': '2016-01-01',
+  'daily_purchases': [{
+    'user_id': 4242,
+    'ticket_purchases': [
+      { 'quantity': 35, 'price': 42.0 },
+      { 'quantity': 1337, 'price': 42.1 }]}, {
+    'user_id': 5565,
+    'ticket_purchases': [
+      { 'quantity': 666.0, 'price': 42.0 },
+      { 'quantity': 555.0, 'price': 42.1 }]}
+  ]}, {
+  'date': '2016-01-02',
+  'daily_purchases': [{
+    'user_id': 5565,
+    'ticket_purchases': [
+      { 'quantity': 666.0, 'price': 42.0 },
+      { 'quantity': 555.0, 'price': 42.1 }]}]
+}]
 ```
 
 We can get a flat DataFrame with the purchase data per user in one function call:
 
-```
+```python
 import pandas as pd
 
 df = pd.io.json.json_normalize(
      data=data,                                            # dict-like object
      record_path=['daily_purchases', 'ticket_purchases'],  # the path to the data [1]
-     meta=['date', ['daily_purchases', 'user_id']]         # the columns we want [2]
+     meta=['date', ['daily_purchases', 'user_id']]         # metadata for each record [2]
 )
 
 df = df.rename(columns={'daily_purchases.user_id': 'user_id'})
+```
 
+The DataFrame will look like below:
+
+```
    price  quantity  user_id        date
 0   42.0      35.0     4242  2016-01-01
 1   42.1    1337.0     4242  2016-01-01
