@@ -60,20 +60,15 @@ def test_my_logs(caplog):
 
     assert some_function() == some_result
 
-    # filter by level
-    info_logs = (
-        logger, line
+    # filter by level and logger
+    info_logs = [
+        line
         for logger, level, line in caplog.record_tuples
-        if level == logging.INFO)
-
-    # filter by logger
-    some_function_logs = (
-        logger, line
-        for logger, level, line in caplog.record_tuples
-        if logger == 'some_module.some_function')
+        if level == logging.INFO and logger == 'some_module.some_function'
+    ]
 
     # assert the logs are what we expected
-    assert list(line for _, line in info_logs) == [
+    assert info_logs == [
         'first message',
         'second_message',
         'third_message: %d' % fixture.id,

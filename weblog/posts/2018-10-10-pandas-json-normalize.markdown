@@ -1,15 +1,25 @@
 ---
-title: Pandas & JSON
+title: Pandas JSON cheatsheet
 author: me
 ---
 
-# json_normalize
+## read_json
+
+[Documentation](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_json.html)
+
+## to_json
+
+[Documentation](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.to_json.html)
+
+## build_table_schema
+
+[Documentation](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.io.json.build_table_schema.html)
+
+## json_normalize
 
 [Documentation page](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.io.json.json_normalize.html)
 
-To transform nested JSON into a DataFrame, we can use `json_normalize` to describe how to unwrap the object.
-The official documentation is not very clear on how to select data from nested dicts.
-For example we have the following data:
+Example data::
 
 ```python
 [{
@@ -42,12 +52,12 @@ df = pd.io.json.json_normalize(
      data=data,                                            # dict-like object
      record_path=['daily_purchases', 'ticket_purchases'],  # the path to the data [1]
      meta=['date', ['daily_purchases', 'user_id']]         # metadata for each record [2]
-)
-
-df = df.rename(columns={'daily_purchases.user_id': 'user_id'})
+).rename(columns={
+  'daily_purchases.user_id': 'user_id'
+})
 ```
 
-The DataFrame will look like below:
+The DataFrame will look like this:
 
 ```
    price  quantity  user_id        date

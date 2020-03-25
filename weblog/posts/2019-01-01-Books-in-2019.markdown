@@ -8,6 +8,8 @@ title: Books read in 2019
 
 *Roger LOWENSTEIN*
 
+&#9733; &#9733; &#9733; &#9733; &#9733; &#9733; &#9733; &#9734; &#9734; &#9734;
+
 A book about the rise and fall of [Long-Term Capital Management](https://en.wikipedia.org/wiki/Long-Term_Capital_Management), a hedge fund from the 1990s. I thought it was interesting to see famous academics joining the team to confront their theories to the reality of the markets. Many famous names in the book. The narration is a bit slow, it could have been a few pages shorter, but overall interesting and entertaining.
 
 Key takeaways:
@@ -18,19 +20,25 @@ Key takeaways:
 
 ### Black Edge: Inside Information, Dirty Money, and the Quest to Bring Down the Most Wanted Man on Wall Street
 
-*Sheelah Kolhatkar*
+*Sheelah KOLHATKAR*
+
+&#9733; &#9733; &#9733; &#9733; &#9733; &#9733; &#9734; &#9734; &#9734; &#9734;
 
 The story of [SAC Capital](https://en.wikipedia.org/wiki/S.A.C._Capital_Advisors) and [Steven Cohen](https://en.wikipedia.org/wiki/Steven_A._Cohen), all the controversies and cases that surrounded them. As with many other books of this style, I would have liked it a bit shorter and more to the point, but it is interesting and gives insight into the world of hedge funds from a different point of view than the LTCM book.
 
 ### Bad Blood: Secrets and Lies in a Silicon Valley Startup
 
-*John Carreyrou*
+*John CARREYROU*
+
+&#9733; &#9733; &#9733; &#9733; &#9733; &#9733; &#9734; &#9734; &#9734; &#9734;
 
 The story of biotech startup Theranos, and Elizabeth Holmes. I had only head about the company in passing, and was amazed at how much money and talent they were able to get a hold of before things went south. Famous people got more or less conned into giving them money! A bit long towards the end, but a good read about the way Sillicon Valley entrepreneurs and VCs can sometimes go too far.
 
 ### The Man Who Solved the Market: How Jim Simons Launched the Quant Revolution
 
-*Gregory Zuckerman*
+*Gregory ZUCKERMAN*
+
+&#9733; &#9733; &#9733; &#9733; &#9733; &#9734; &#9734; &#9734; &#9734; &#9734;
 
 A kind of biography of Jim Simons and his hedge fund Renaissance Technologies. Nothing technical in it, but it's an easy read, and has interesting anecdotes about the founder and the employees of the famous hedge fund.
 
@@ -41,6 +49,8 @@ A kind of biography of Jim Simons and his hedge fund Renaissance Technologies. N
 ### The Little Book of Common Sense Investing
 
 *John BOGLE*
+
+&#9733; &#9733; &#9733; &#9733; &#9733; &#9733; &#9733; &#9733; &#9733; &#9734;
 
 A short book with lots of diagrams showing why it can make sense to invest in ETFs rather than active funds. Clear and easy to follow.
 
@@ -59,6 +69,8 @@ I believe high school or university student should read this, to get a basic ide
 
 *Haruki MURAKAMI*
 
+&#9733; &#9733; &#9733; &#9733; &#9733; &#9733; &#9733; &#9734; &#9734; &#9734;
+
 A collection of short stories, reminded me of "Je voudrais que quelqu'un m'attende quelque part" from Anna Gavalda. The stories are slices of life, each one about a man's relationship with a woman. The endings are very open to interpretation, somewhat bittersweet.
 
 A good quick read.
@@ -67,15 +79,21 @@ A good quick read.
 
 *Lee CHILD*
 
-#### Killing Floor (Jack Reacher book 1)
+#### Killing Floor (book 1)
+
+&#9733; &#9733; &#9733; &#9733; &#9733; &#9733; &#9733; &#9734; &#9734; &#9734;
 
 First book of the Jack Reacher series. First person narration, lots of short sentences, making it feel like the main characters has some behavioral flaws. Lots of action, bit of a Jason Bourne on steroids. Reads nice and fast, entertaining.
 
-#### Die Trying (Jack Reacher book 2)
+#### Die Trying (book 2)
+
+&#9733; &#9733; &#9733; &#9733; &#9733; &#9733; &#9734; &#9734; &#9734; &#9734;
 
 Second book of the Jack Reacher series. This time in third person narration, we have to follow multiple characters at the same time, which I felt didn't flow as nicely as the first book. Definitely Jason Bourne on steroids.
 
-#### Jack Reacher books 3 to 10
+#### Books 3 to 10
+
+&#9733; &#9733; &#9733; &#9733; &#9733; &#9733; &#9733; &#9734; &#9734; &#9734;
 
 All easy and entertaining reads. Plots are okay, lots of action, a few side stories along the way to keep the main character interesting. Will read more of this series.
 
@@ -87,11 +105,17 @@ All easy and entertaining reads. Plots are okay, lots of action, a few side stor
 
 *Jim BUTCHER*
 
+&#9733; &#9733; &#9733; &#9733; &#9733; &#9733; &#9733; &#9733; &#9734; &#9734;
+
 Harry Dresden is the only wizard detective of Chicago. He's a confident idiot who wields both revolvers and fireballs (and sarcasm). As he investigates a series of homicides, he ends up in more trouble he could ever have imagined. As the series goes on, the main character learns a lot and matures along the way, makes friends, loses friends. Very entertaining!
 
 ### The Mistborn Trilogy
 
 *Brandon SANDERSON*
+
+- The Final Empire: &#9733; &#9733; &#9733; &#9733; &#9733; &#9733; &#9733; &#9733; &#9734; &#9734;
+- The Well of Ascension: &#9733; &#9733; &#9733; &#9733; &#9733; &#9733; &#9733; &#9733; &#9734; &#9734;
+- The Hero of Ages: &#9733; &#9733; &#9733; &#9733; &#9733; &#9734; &#9734; &#9734; &#9734; &#9734;
 
 In a world where people can eat metals to gain magical powers, a young woman goes from beggar to hero when she discovers her own rare and powerful abilities.
 
@@ -101,13 +125,17 @@ I was also not a fan of the ending, which felt a bit like a Deus Ex Machina. Ove
 
 ### The Black Prism
 
-*Brent Weeks*
+*Brent WEEKS*
+
+&#9733; &#9733; &#9733; &#9733; &#9733; &#9733; &#9733; &#9734; &#9734; &#9734;
 
 An awkward kid turns out to be the son of the most powerful man in the world. Magic works in an interesting way, not unlike in the Mistborn trilogy. Easy to read and entertaining, will read the rest of the saga.
 
 ### The Kingkiller Chronicles
 
-*Patrick Rothfuss*
+*Patrick ROTHFUSS*
+
+&#9733; &#9733; &#9733; &#9733; &#9733; &#9733; &#9733; &#9734; &#9734; &#9734;
 
 The story, told by himself, of Kvothe, a musician-wizard-thief-assassin that seems to be infamous for reasons we still don't know. His parents were killed by mysterious bad guys when he was still a (naive genius) kid, and he decided to do what it takes to find out more about them. The story has ups and downs, but it is well-written and mostly captivating. More books yet to come in this saga, and I will definitely read them.
 
@@ -117,12 +145,16 @@ The story, told by himself, of Kvothe, a musician-wizard-thief-assassin that see
 
 ### Childhood's End
 
-*Arthur C. Clarke*
+*Arthur C. CLARKE*
+
+&#9733; &#9733; &#9733; &#9733; &#9733; &#9733; &#9733; &#9733; &#9733; &#9734;
 
 One of my favorite and most depressing reads this year. The story of a community that starts their own utopic society, mysterious aliens that come to benevolently rule earth, and evolution. Thought-provoking and hard not to finish in one go.
 
 #### The Lathe of Heaven
 
-*Ursula K. Le Guin*
+*Ursula K. LE GUIN*
+
+&#9733; &#9733; &#9733; &#9733; &#9733; &#9733; &#9733; &#9733; &#9733; &#9734;
 
 Another of my favorite books this year. The main character can alter reality while dreaming, his psychiatrist realizes this and tries to work with it, only for things to go really out of whack. Psychedelic and mesmerizing.
