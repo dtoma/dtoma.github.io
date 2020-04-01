@@ -1,6 +1,6 @@
 ---
 title: Pytest cheatsheet
-author: me
+withtoc: true
 ---
 
 Some notes about the features I use the most from [pytest](https://docs.pytest.org/en/latest/).

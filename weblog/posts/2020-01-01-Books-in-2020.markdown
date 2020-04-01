@@ -1,0 +1,26 @@
+---
+title: Books in 2020
+withtoc: true
+---
+
+## Technical
+
+### Professional CMake: A Practical Guide
+
+*Craig SCOTT*
+
+A reference manual for CMake. I was hoping for something more like a project-based walkthrough, but it is very thorough and a useful reference on many topics. Used in conjunction with Google, I'm able to do what I want in ways that feel simple and maintainable enough (using CMake to build a C++ monorepo).
+
+*Read in Progress*
+
+## Career
+
+### Developer Hegemony
+
+> The Future of Labor
+
+*Erik Dietrich*
+
+The author's thoughts on how to manage one's career as a programmer, and his observations and experiences from working in large companies and startups.
+
+*Read in Progress*
