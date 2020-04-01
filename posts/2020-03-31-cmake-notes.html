@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Notes on CMake</title>
+        <link rel="stylesheet" href="../css/bootstrap-reboot.min.css" />
+        <link rel="stylesheet" href="../css/bootstrap-grid.min.css" />
+        <link rel="stylesheet" href="../css/default.css" />
+        <link rel="stylesheet" href="../css/code.css" />
+    </head>
+    <body>
+        <div class="container">
+            <header class="py-3 col-12">
+                <a href="../">Home Page</a>
+            </header>
+            <div class="row">
+                <div class="col-xl-9">
+                    <h1>Notes on CMake</h1>
+
+<div class="toc">
+<ul>
+<li><a href="#useful-resources">Useful Resources</a></li>
+<li><a href="#getting-started">Getting Started</a></li>
+<li><a href="#fetching-and-installing-dependencies">Fetching and Installing Dependencies</a></li>
+<li><a href="#running-tests">Running Tests</a></li>
+<li><a href="#build-type">Build type</a></li>
+</ul>
+</div>
+<h2 id="useful-resources">Useful Resources</h2>
+<ul>
+<li><a href="https://crascit.com/professional-cmake/">Professional CMake</a> Book</li>
+<li>CMake <a href="https://cmake.org/cmake/help/latest/">official documentation</a></li>
+<li>CTest <a href="https://gitlab.kitware.com/cmake/community/-/wikis/doc/ctest/Testing-With-CTest">Wiki</a></li>
+</ul>
+<h2 id="getting-started">Getting Started</h2>
+<p>The simplest <code>CMakeLists.txt</code> contains:</p>
+<div class="sourceCode"><pre class="sourceCode cmake"><code class="sourceCode cmake"><span class="kw">cmake_minimum_required</span>(<span class="ot">VERSION</span> 3.2)
+
+<span class="co"># `VERSION` and `LANGUAGES` are optional</span>
+<span class="kw">project</span>(myProject <span class="ot">VERSION</span> 0.0.1 <span class="ot">LANGUAGES</span> CXX)
+<span class="kw">add_executable</span>(example main.cpp)</code></pre></div>
+<p>We can generate build files for the current platform, then build an executable:</p>
+<div class="sourceCode"><pre class="sourceCode sh"><code class="sourceCode bash"><span class="fu">mkdir</span> build <span class="kw">&amp;&amp;</span> <span class="bu">cd</span> build  # Out-of-source build
+<span class="fu">cmake</span> ..                 # Generate build files
+<span class="fu">cmake</span> --build .          # Run build
+<span class="ex">./Debug/example.exe</span>      # Run the resulting binary</code></pre></div>
+<h2 id="fetching-and-installing-dependencies">Fetching and Installing Dependencies</h2>
+<p>We can use <code>CMake</code> to download and install dependencies.</p>
+<p>The following setup will clone GitHub repos, and install the libraries using their CMake files during the build step:</p>
+<div class="sourceCode"><pre class="sourceCode cmake"><code class="sourceCode cmake"><span class="kw">cmake_minimum_required</span>(<span class="ot">VERSION</span> 3.8)
+
+<span class="kw">include</span>(FetchContent)
+
+<span class="fu">FetchContent_Declare</span>(googletest
+  GIT_REPOSITORY https://github.com/google/googletest.git
+  GIT_TAG release-1.10.0
+)
+
+<span class="fu">FetchContent_Declare</span>(fmt
+  GIT_REPOSITORY https://github.com/fmtlib/fmt.git
+  GIT_TAG 6.1.2
+)
+
+<span class="fu">FetchContent_Declare</span>(benchmark
+  GIT_REPOSITORY https://github.com/google/benchmark
+)
+
+<span class="co"># Fix for googletest, otherwise we get LNK2038 errors on Windows</span>
+<span class="kw">set</span>(gtest_force_shared_crt <span class="ot">ON</span> <span class="ot">CACHE</span> <span class="ot">BOOL</span> <span class="st">&quot;&quot;</span> <span class="ot">FORCE</span>)
+
+<span class="co"># Clone repos and install libraries</span>
+<span class="fu">FetchContent_MakeAvailable</span>(googletest fmt benchmark)</code></pre></div>
+<h2 id="running-tests">Running Tests</h2>
+<p>In the root <code>CMakeLists.txt</code>:</p>
+<div class="sourceCode"><pre class="sourceCode cmake"><code class="sourceCode cmake"><span class="kw">enable_testing</span>()
+<span class="kw">include</span>(GoogleTest)
+
+<span class="co"># This directory contains its own CMakeLists.txt</span>
+<span class="kw">add_subdirectory</span>(test_directory)</code></pre></div>
+<p>Using the following example test:</p>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="pp">#include </span><span class="im">&quot;gtest/gtest.h&quot;</span>
+
+TEST(Example, TestNothing) {
+    EXPECT_EQ(<span class="dv">1</span>, <span class="dv">1</span>);
+}</code></pre></div>
+<p>We have a <code>CMakeLists.txt</code> in <code>test_directory</code> to builds the test(s):</p>
+<div class="sourceCode"><pre class="sourceCode cmake"><code class="sourceCode cmake"><span class="kw">add_executable</span>(myTests test.cpp)
+<span class="kw">target_link_libraries</span>(myTests gtest_main)
+<span class="fu">gtest_discover_tests</span>(myTests)</code></pre></div>
+<p>Build, then run using <code>CTest</code>:</p>
+<div class="sourceCode"><pre class="sourceCode sh"><code class="sourceCode bash"><span class="fu">cmake</span> ..         # Generate build files
+<span class="fu">cmake</span> --build .  # Build test executable
+<span class="ex">ctest</span>            # Run tests</code></pre></div>
+<p>With the following example output:</p>
+<div class="sourceCode"><pre class="sourceCode sh"><code class="sourceCode bash"><span class="ex">PS</span> C:\Users\damien\project\build<span class="op">&gt;</span> ctest
+<span class="ex">Test</span> project C:\Users\damien\project\build
+    <span class="ex">Start</span> 1: Example.TestNothing
+<span class="ex">1/1</span> Test <span class="co">#1: Example.TestNothing .......   Passed    0.01 sec</span>
+
+<span class="ex">100%</span> tests passed, 0 tests failed out of 1
+
+<span class="ex">Total</span> Test time (real) =   <span class="ex">0.03</span> sec</code></pre></div>
+<p><strong>! Caveat:</strong> After installing dependencies using <code>FetchContent_Declare</code>, <code>CTest</code> also picks up their tests, and I end up having to filter what I want using <code>ctest -R &lt;MyTests&gt;</code> (run only tests that contain <code>&lt;MyTests&gt;</code>).</p>
+<h2 id="build-type">Build type</h2>
+<ul>
+<li>Release</li>
+<li>Debug</li>
+<li>RelWithDebInfo</li>
+<li>MinSizeRel</li>
+</ul>
+<p>On some platforms, we can set the build type from the configuration generation phase:</p>
+<div class="sourceCode"><pre class="sourceCode sh"><code class="sourceCode bash"><span class="fu">cmake</span> -G Ninja -DCMAKE_BUILD_TYPE:STRING=Release ../source
+<span class="fu">cmake</span> --build .</code></pre></div>
+<p>On other platforms eg. Windows, it has to be done at the build phase:</p>
+<div class="sourceCode"><pre class="sourceCode sh"><code class="sourceCode bash"><span class="fu">cmake</span> ../source
+<span class="fu">cmake</span> --build . --config Release</code></pre></div>
+                </div>
+                <div class="col-xl-3"></div>
+            </div>
+            <footer class="py-3"></footer>
+        </div>
+        <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+    </body>
+</html>

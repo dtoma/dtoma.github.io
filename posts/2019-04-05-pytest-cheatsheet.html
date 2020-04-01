@@ -17,7 +17,17 @@
             </header>
             <div class="row">
                 <div class="col-xl-9">
-                    <p>Some notes about the features I use the most from <a href="https://docs.pytest.org/en/latest/">pytest</a>.</p>
+                    <h1>Pytest cheatsheet</h1>
+
+<div class="toc">
+<ul>
+<li><a href="#setupteardown">SetUp/TearDown</a></li>
+<li><a href="#fixtures-scope-and-autouse">Fixtures scope and autouse</a></li>
+<li><a href="#testing-logs">Testing logs</a></li>
+<li><a href="#parametrized-tests">Parametrized tests</a></li>
+</ul>
+</div>
+<p>Some notes about the features I use the most from <a href="https://docs.pytest.org/en/latest/">pytest</a>.</p>
 <h2 id="setupteardown">SetUp/TearDown</h2>
 <p>We can use <code>yield</code> in pytest fixtures to emulate class-based tests SetUp/TearDown methods. It works particularly well with decorators - the example below will run <code>test_foo</code> with a patched <code>module.function</code>, then reset the patched function after the test finishes:</p>
 <div class="sourceCode"><pre class="sourceCode python"><code class="sourceCode python"><span class="im">from</span> unittest.mock <span class="im">import</span> patch
@@ -77,7 +87,6 @@
 )
 <span class="kw">def</span> test_eval(test_input, expected):
     <span class="cf">assert</span> <span class="bu">eval</span>(test_input) <span class="op">==</span> expected</code></pre></div>
-
                 </div>
                 <div class="col-xl-3"></div>
             </div>
