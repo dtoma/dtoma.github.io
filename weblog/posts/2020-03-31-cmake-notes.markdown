@@ -30,7 +30,29 @@ cmake --build .          # Run build
 ./Debug/example.exe      # Run the resulting binary
 ```
 
-## Fetching and Installing Dependencies
+## Installing Dependencies That Use Other Build Systems
+
+This will create build steps at configure time, and download/extract/build/etc. at build time. We then need to declare the dependencies in the right order. This incomplete example shows the gist of it:
+
+```cmake
+include(ExternalProject)
+
+ExternalProject_Add(boost
+    PREFIX boost
+    URL https://dl.bintray.com/boostorg/release/1.72.0/source/boost_1_72_0.zip
+    URL_HASH SHA256=8c20440aaba21dd963c0f7149517445f50c62ce4eb689df2b5544cc89e6e621e
+    CONFIGURE_COMMAND ${_BOOTSTRAP_COMMAND}
+    BUILD_COMMAND ${_B2_COMMAND}
+    BUILD_IN_SOURCE 1
+    INSTALL_COMMAND ""
+)
+```
+
+Resources:
+
+- [Installing Boost](https://github.com/apache/geode-native/blob/develop/dependencies/boost/CMakeLists.txt)
+
+## Installing Dependencies That Use CMake
 
 We can use `CMake` to download and install dependencies.
 
@@ -61,6 +83,11 @@ set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
 # Clone repos and install libraries
 FetchContent_MakeAvailable(googletest fmt benchmark)
 ```
+
+Resources:
+
+- [Installing github.com/nlohmann/json](https://cmake.org/pipermail/cmake/2019-March/069206.html) <1>
+- [Installing github.com/nlohmann/json](https://github.com/nlohmann/json/issues/1634) <2>
 
 ## Running Tests
 
@@ -113,7 +140,12 @@ Test project C:\Users\damien\project\build
 Total Test time (real) =   0.03 sec
 ```
 
-**! Caveat:** After installing dependencies using `FetchContent_Declare`, `CTest` also picks up their tests, and I end up having to filter what I want using `ctest -R <MyTests>` (run only tests that contain `<MyTests>`).
+**! Caveat:** After installing dependencies using `FetchContent_Declare`, `CTest` also picks up their tests.
+
+I have found 2 workarounds so far:
+
+- filter tests using `ctest -R <MyTests>` (run only tests with names containing `<MyTests>`)
+- when possible, set options to not build tests before the call to `FetchContent_MakeAvailable`, for example `set(BENCHMARK_ENABLE_TESTING OFF)`
 
 ## Build type
 
@@ -134,4 +166,45 @@ On other platforms eg. Windows, it has to be done at the build phase:
 ```sh
 cmake ../source
 cmake --build . --config Release
+```
+
+## Project Structure
+
+I like to use what seems to be called a "Superbuild" in CMake parlance:
+
+> Where dependencies do not use CMake as their build system, a superbuild tends to be the preferred structure. This treats each dependency as its own separate build, with the main project directing the overall sequence and the way details are passed from one dependency’s build to another. Each separate build is added to the main build using `ExternalProject`. Such an arrangement allows CMake to look at what each build produces and automatically detect information that can then be passed on to other dependencies, thereby avoiding having to manually hard code that information in the main build.
+
+*- Professional CMake 5th Edition*
+
+When necessary we can use `ExternalProject`, and when we can there is the simpler `FetchContent` to install dependencies. Most projects already provide knobs to tweak builds, tests, and make it convenient to integrate their projects into ours.
+
+```
++------------------+-----------------+
+| ExternalProjects |                 |
++------------------+                 |
+|                                    +------+
+|     Boost                          |      |
+|                                    |      |
++------------------------------------+      |
+                                            |
+                                            |
++--------------+---------------------+      |
+| FetchContent |                     |      |
++--------------+      fmt            |      |
+|                                    <------+
+|    googletest                      |
+|               google/benchmark     |
+|       re2                          +------+
+|            nlohmann/json           |      |
+|                                    |      |
++------------------------------------+      |
+                                            |
+                                            |
++---------------+--------------------+      |
+| Local Project |                    |      |
++---------------+                    |      |
+|                                    <------+
+|     main.cpp     main.hpp          |
+|                                    |
++------------------------------------+
 ```
