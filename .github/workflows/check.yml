@@ -1,0 +1,17 @@
+name: Check for typos and broken links
+
+on:
+  push:
+    branches: [ hakyll ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Print Aspell version
+      run: aspell --version
+    - name: Spellcheck
+      run: find ./weblog/posts/ -type f -exec sh -c 'aspell list < "$1"' sh {} \; | sort | uniq -c | sort -r
+    - name: Check for broken links in previous version of the site
+      run: wget --spider -r -l 1 -w 1 -nd -nv -H dtoma.github.io || echo "Done"
