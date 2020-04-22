@@ -1,31 +1,35 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Notes on CMake</title>
-        <link rel="stylesheet" href="../css/bootstrap-reboot.min.css" />
-        <link rel="stylesheet" href="../css/bootstrap-grid.min.css" />
-        <link rel="stylesheet" href="../css/default.css" />
-        <link rel="stylesheet" href="../css/code.css" />
-    </head>
-    <body>
-        <div class="container">
-            <header class="py-3 col-12">
-                <a href="../">Home Page</a>
-            </header>
-            <div class="row">
-                <div class="col-xl-9">
-                    <h1>Notes on CMake</h1>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Notes on CMake</title>
+    <link rel="stylesheet" href="../css/bootstrap-reboot.min.css" />
+    <link rel="stylesheet" href="../css/bootstrap-grid.min.css" />
+    <link rel="stylesheet" href="../css/default.css" />
+    <link rel="stylesheet" href="../css/code.css" />
+</head>
+
+<body>
+    <div class="container">
+        <header class="py-3 col-12">
+            <a href="../">Home Page</a>
+        </header>
+        <div class="row">
+            <div class="col-xl-9">
+                <h1>Notes on CMake</h1>
 
 <div class="toc">
 <ul>
 <li><a href="#useful-resources">Useful Resources</a></li>
 <li><a href="#getting-started">Getting Started</a></li>
-<li><a href="#fetching-and-installing-dependencies">Fetching and Installing Dependencies</a></li>
+<li><a href="#installing-dependencies-that-use-other-build-systems">Installing Dependencies That Use Other Build Systems</a></li>
+<li><a href="#installing-dependencies-that-use-cmake">Installing Dependencies That Use CMake</a></li>
 <li><a href="#running-tests">Running Tests</a></li>
 <li><a href="#build-type">Build type</a></li>
+<li><a href="#project-structure">Project Structure</a></li>
 </ul>
 </div>
 <h2 id="useful-resources">Useful Resources</h2>
@@ -46,7 +50,24 @@
 <span class="fu">cmake</span> ..                 # Generate build files
 <span class="fu">cmake</span> --build .          # Run build
 <span class="ex">./Debug/example.exe</span>      # Run the resulting binary</code></pre></div>
-<h2 id="fetching-and-installing-dependencies">Fetching and Installing Dependencies</h2>
+<h2 id="installing-dependencies-that-use-other-build-systems">Installing Dependencies That Use Other Build Systems</h2>
+<p>This will create build steps at configure time, and download/extract/build/etc. at build time. We then need to declare the dependencies in the right order. This incomplete example shows the gist of it:</p>
+<div class="sourceCode"><pre class="sourceCode cmake"><code class="sourceCode cmake"><span class="kw">include</span>(ExternalProject)
+
+<span class="fu">ExternalProject_Add</span>(boost
+    PREFIX boost
+    URL https://dl.bintray.com/boostorg/release/1.72.0/source/boost_1_72_0.zip
+    URL_HASH SHA256=8c20440aaba21dd963c0f7149517445f50c62ce4eb689df2b5544cc89e6e621e
+    CONFIGURE_COMMAND <span class="va">${_BOOTSTRAP_COMMAND}</span>
+    BUILD_COMMAND <span class="va">${_B2_COMMAND}</span>
+    BUILD_IN_SOURCE 1
+    INSTALL_COMMAND <span class="st">&quot;&quot;</span>
+)</code></pre></div>
+<p>Resources:</p>
+<ul>
+<li><a href="https://github.com/apache/geode-native/blob/develop/dependencies/boost/CMakeLists.txt">Installing Boost</a></li>
+</ul>
+<h2 id="installing-dependencies-that-use-cmake">Installing Dependencies That Use CMake</h2>
 <p>We can use <code>CMake</code> to download and install dependencies.</p>
 <p>The following setup will clone GitHub repos, and install the libraries using their CMake files during the build step:</p>
 <div class="sourceCode"><pre class="sourceCode cmake"><code class="sourceCode cmake"><span class="kw">cmake_minimum_required</span>(<span class="ot">VERSION</span> 3.8)
@@ -72,6 +93,11 @@
 
 <span class="co"># Clone repos and install libraries</span>
 <span class="fu">FetchContent_MakeAvailable</span>(googletest fmt benchmark)</code></pre></div>
+<p>Resources:</p>
+<ul>
+<li><a href="https://cmake.org/pipermail/cmake/2019-March/069206.html">Installing github.com/nlohmann/json</a> &lt;1&gt;</li>
+<li><a href="https://github.com/nlohmann/json/issues/1634">Installing github.com/nlohmann/json</a> &lt;2&gt;</li>
+</ul>
 <h2 id="running-tests">Running Tests</h2>
 <p>In the root <code>CMakeLists.txt</code>:</p>
 <div class="sourceCode"><pre class="sourceCode cmake"><code class="sourceCode cmake"><span class="kw">enable_testing</span>()
@@ -102,7 +128,12 @@ TEST(Example, TestNothing) {
 <span class="ex">100%</span> tests passed, 0 tests failed out of 1
 
 <span class="ex">Total</span> Test time (real) =   <span class="ex">0.03</span> sec</code></pre></div>
-<p><strong>! Caveat:</strong> After installing dependencies using <code>FetchContent_Declare</code>, <code>CTest</code> also picks up their tests, and I end up having to filter what I want using <code>ctest -R &lt;MyTests&gt;</code> (run only tests that contain <code>&lt;MyTests&gt;</code>).</p>
+<p><strong>! Caveat:</strong> After installing dependencies using <code>FetchContent_Declare</code>, <code>CTest</code> also picks up their tests.</p>
+<p>I have found 2 workarounds so far:</p>
+<ul>
+<li>filter tests using <code>ctest -R &lt;MyTests&gt;</code> (run only tests with names containing <code>&lt;MyTests&gt;</code>)</li>
+<li>when possible, set options to not build tests before the call to <code>FetchContent_MakeAvailable</code>, for example <code>set(BENCHMARK_ENABLE_TESTING OFF)</code></li>
+</ul>
 <h2 id="build-type">Build type</h2>
 <ul>
 <li>Release</li>
@@ -116,13 +147,49 @@ TEST(Example, TestNothing) {
 <p>On other platforms eg. Windows, it has to be done at the build phase:</p>
 <div class="sourceCode"><pre class="sourceCode sh"><code class="sourceCode bash"><span class="fu">cmake</span> ../source
 <span class="fu">cmake</span> --build . --config Release</code></pre></div>
-                </div>
-                <div class="col-xl-3"></div>
+<h2 id="project-structure">Project Structure</h2>
+<p>I like to use what seems to be called a “Superbuild” in CMake parlance:</p>
+<blockquote>
+<p>Where dependencies do not use CMake as their build system, a superbuild tends to be the preferred structure. This treats each dependency as its own separate build, with the main project directing the overall sequence and the way details are passed from one dependency’s build to another. Each separate build is added to the main build using <code>ExternalProject</code>. Such an arrangement allows CMake to look at what each build produces and automatically detect information that can then be passed on to other dependencies, thereby avoiding having to manually hard code that information in the main build.</p>
+</blockquote>
+<p><em>- Professional CMake 5th Edition</em></p>
+<p>When necessary we can use <code>ExternalProject</code>, and when we can there is the simpler <code>FetchContent</code> to install dependencies. Most projects already provide knobs to tweak builds, tests, and make it convenient to integrate their projects into ours.</p>
+<pre><code>+------------------+-----------------+
+| ExternalProjects |                 |
++------------------+                 |
+|                                    +------+
+|     Boost                          |      |
+|                                    |      |
++------------------------------------+      |
+                                            |
+                                            |
++--------------+---------------------+      |
+| FetchContent |                     |      |
++--------------+      fmt            |      |
+|                                    &lt;------+
+|    googletest                      |
+|               google/benchmark     |
+|       re2                          +------+
+|            nlohmann/json           |      |
+|                                    |      |
++------------------------------------+      |
+                                            |
+                                            |
++---------------+--------------------+      |
+| Local Project |                    |      |
++---------------+                    |      |
+|                                    &lt;------+
+|     main.cpp     main.hpp          |
+|                                    |
++------------------------------------+</code></pre>
             </div>
-            <footer class="py-3"></footer>
+            <div class="col-xl-3"></div>
         </div>
-        <!--[if lte IE 9]>
+        <footer class="py-3"></footer>
+    </div>
+    <!--[if lte IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
-    </body>
+</body>
+
 </html>
