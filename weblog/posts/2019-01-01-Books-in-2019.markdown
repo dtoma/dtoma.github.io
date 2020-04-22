@@ -45,7 +45,7 @@ The story of [SAC Capital](https://en.wikipedia.org/wiki/S.A.C._Capital_Advisors
 
 [Goodreads](https://www.goodreads.com/book/show/37976541)
 
-The story of biotech startup Theranos, and Elizabeth Holmes. I had only head about the company in passing, and was amazed at how much money and talent they were able to get a hold of before things went south. Famous people got more or less conned into giving them money! A bit long towards the end, but a good read about the way Sillicon Valley entrepreneurs and VCs can sometimes go too far.
+The story of biotech startup [Theranos](https://en.wikipedia.org/wiki/Theranos), and [Elizabeth Holmes](https://en.wikipedia.org/wiki/Elizabeth_Holmes). I had only head about the company in passing, and was amazed at how much money and talent they were able to get a hold of before things went south. Famous people got more or less conned into giving them money! A bit long towards the end, but a good read about the way Sillicon Valley entrepreneurs and VCs can sometimes go too far.
 
 ### The Man Who Solved the Market
 
@@ -57,7 +57,7 @@ The story of biotech startup Theranos, and Elizabeth Holmes. I had only head abo
 
 [Goodreads](https://www.goodreads.com/book/show/43889703)
 
-A kind of biography of Jim Simons and his hedge fund Renaissance Technologies. Nothing technical in it, but it's an easy read, and has interesting anecdotes about the founder and the employees of the famous hedge fund.
+A kind of biography of [Jim Simons](https://en.wikipedia.org/wiki/Jim_Simons_(mathematician)) and his hedge fund [Renaissance Technologies](https://en.wikipedia.org/wiki/Renaissance_Technologies). Nothing technical in it, but it's an easy read, and has interesting anecdotes about the founder and the employees of the famous hedge fund.
 
 ## Finance
 
@@ -69,12 +69,12 @@ A kind of biography of Jim Simons and his hedge fund Renaissance Technologies. N
 
 [Goodreads](https://www.goodreads.com/book/show/171127)
 
-A short book with lots of diagrams showing why it can make sense to invest in ETFs rather than active funds. Clear and easy to follow.
+A short book with lots of diagrams showing why it can make sense to invest in [ETFs](https://www.investopedia.com/terms/e/etf.asp) rather than active funds. Clear and easy to follow.
 
 Two points that summarize this book, in my opinion:
 
 1. Few active money managers beat the market
-2. If you are paying management fees of, then your active money manager beat the market by more than the fees to be worth it
+2. If you are paying management fees, then your active money manager would need to beat the market by more than the fees to be worth it
 
 I believe high school or university student should read this, to get a basic idea of what to do with their money once they start earning it.
 
@@ -102,7 +102,7 @@ A good quick read.
 
 <span class="stars" rating="7"></span>
 
-First book of the Jack Reacher series. First person narration, lots of short sentences, making it feel like the main characters has some behavioral flaws. Lots of action, bit of a Jason Bourne on steroids. Reads nice and fast, entertaining.
+First book of the [Jack Reacher series](https://en.wikipedia.org/wiki/Jack_Reacher_(book_series)). First person narration, lots of short sentences, making it feel like the main characters has some behavioral flaws. Lots of action, bit of a Jason Bourne on steroids. Reads nice and fast, entertaining.
 
 #### Die Trying (book 2)
 
@@ -126,7 +126,7 @@ All easy and entertaining reads. Plots are okay, lots of action, a few side stor
 
 [Goodreads](https://www.goodreads.com/series/40346)
 
-Harry Dresden is the only wizard detective of Chicago. He's a confident idiot who wields both revolvers and fireballs (and sarcasm). As he investigates a series of homicides, he ends up in more trouble he could ever have imagined. As the series goes on, the main character learns a lot and matures along the way, makes friends, loses friends. Very entertaining!
+[Harry Dresden](https://en.wikipedia.org/wiki/The_Dresden_Files) is the only wizard detective of Chicago. He's a confident guy who wields both revolvers and fireballs (and sarcasm). As he investigates a series of homicides, he ends up in more trouble he could ever have imagined. As the series goes on, the main character learns a lot and matures along the way, makes friends, loses friends. Very entertaining!
 
 ### The Mistborn Trilogy
 
@@ -140,7 +140,7 @@ The Hero of Ages      | <span class="stars" rating="5"></span> | [Link](https://
 
 In a world where people can eat metals to gain magical powers, a young woman goes from beggar to hero when she discovers her own rare and powerful abilities.
 
-I loved the first tome, liked the second one, and bore through the third one. I felt that it started off full of action, new ideas, punchy dialogue, and slowly became slower, more depressing, with a lot of inner dialogue from multiple characters towards the end. I guess since the end of the world is coming, it makes sense to change the mood of the characters accordingly, I just had a hard time finishing it.
+I loved the first tome, liked the second one, and slowly bore through the third one. I felt that it started off full of action, new ideas, punchy dialogue, and slowly became slower, more depressing, with a lot of inner dialogue from multiple characters towards the end. I guess since the end of the world is coming, it makes sense to change the mood of the characters accordingly, I just had a hard time finishing it.
 
 I was also not a fan of the ending, which felt a bit like a Deus Ex Machina. Overall worth a read.
 
@@ -163,7 +163,7 @@ Book                 | Rating                                 | Goodreads
 The Name of the Wind | <span class="stars" rating="7"></span> | [Link](https://www.goodreads.com/book/show/186074)
 The Wise Man's Fear  | <span class="stars" rating="7"></span> | [Link](https://www.goodreads.com/book/show/1215032)
 
-The story, told by himself, of Kvothe, a musician-wizard-thief-assassin that seems to be infamous for reasons we still don't know. His parents were killed by mysterious bad guys when he was still a (naive genius) kid, and he decided to do what it takes to find out more about them. The story has ups and downs, but it is well-written and mostly captivating. More books yet to come in this saga, and I will definitely read them.
+The story, told by himself, of [Kvothe](https://en.wikipedia.org/wiki/The_Kingkiller_Chronicle), a musician-wizard-thief-assassin that seems to be infamous for reasons we still don't know. His parents were killed by mysterious bad guys when he was still a (naive genius) kid, and he decided to do what it takes to find out more about them. The story has ups and downs, but it is well-written and mostly captivating. More books yet to come in this saga, and I will definitely read them.
 
 ## Science-fiction
 
