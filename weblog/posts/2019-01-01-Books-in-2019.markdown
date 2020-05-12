@@ -59,6 +59,29 @@ The story of biotech startup [Theranos](https://en.wikipedia.org/wiki/Theranos),
 
 A kind of biography of [Jim Simons](https://en.wikipedia.org/wiki/Jim_Simons_(mathematician)) and his hedge fund [Renaissance Technologies](https://en.wikipedia.org/wiki/Renaissance_Technologies). Nothing technical in it, but it's an easy read, and has interesting anecdotes about the founder and the employees of the famous hedge fund.
 
+###  Weapons of Math Destruction
+
+> How Big Data Increases Inequality and Threatens Democracy
+
+*Cathy O'NEIL*
+
+<span class="stars" rating="7"></span>
+
+[Goodreads](https://www.goodreads.com/book/show/28186015-weapons-of-math-destruction)
+
+The book is a short list of concrete examples, breaking the illusion of impartiality in data-driven models. I think the closing paragraphs of the book explain its point clearly:
+
+> Data is not going away. [...] Predictive models are, increasingly, the tools we will be relying on to run our institutions, deploy our resources, and manage our lives. [...] these models are constructed not just from data but from the choices we make about which data to pay attention to - and which to leave out. These choices are not just about logistics, profits, and efficiency. They are fundamentally moral.
+
+The book's examples and case studies include:
+
+- Moneyball
+- Statistics on recidivism
+- College and university rankings
+- Personality tests in job applications
+
+I think this book makes an important point, but stops short of offering a solution.
+
 ## Finance
 
 ### The Little Book of Common Sense Investing

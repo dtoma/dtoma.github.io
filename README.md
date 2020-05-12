@@ -30,3 +30,13 @@ On Windows:
 ```
 $> chcp 65001
 ```
+
+## Spell checking
+
+Using Aspell.
+
+May work better with Markdown once it's updated to the version mentioned in [this PR](https://github.com/GNUAspell/aspell/issues/536).
+
+## Broken links
+
+CI runs a short `wget` command to find broken links.
