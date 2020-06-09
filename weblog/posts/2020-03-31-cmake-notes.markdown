@@ -208,3 +208,22 @@ When necessary we can use `ExternalProject`, and when we can there is the simple
 |                                    |
 +------------------------------------+
 ```
+
+## Custom Targets
+
+As part of our workflow, we may need to call external commands or binaries. For example, if we build a benchmark suite:
+
+
+```cmake
+add_executable(order_book_bench bench.cpp)
+
+target_link_libraries(order_book_bench PRIVATE benchmark::benchmark order_book)
+
+add_custom_target(runbench COMMAND order_book_bench)
+```
+
+We can then call the target as follows:
+
+```sh
+cd build && cmake --build . --target runbench
+```
