@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Notes on CMake :: dtoma blog</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="How to setup a project using modern CMake features - build, manage dependencies, run tests.
+" />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="/posts/cmake-cheat-sheet/" />
+
+
+
+
+<link rel="stylesheet" href="/assets/style.css">
+
+
+
+
+
+
+<link rel="apple-touch-icon" href="/img/apple-touch-icon-192x192.png">
+
+  <link rel="shortcut icon" href="/img/favicon/orange.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Notes on CMake">
+<meta property="og:description" content="How to setup a project using modern CMake features - build, manage dependencies, run tests.
+" />
+<meta property="og:url" content="/posts/cmake-cheat-sheet/" />
+<meta property="og:site_name" content="dtoma blog" />
+
+  
+    <meta property="og:image" content="/img/favicon/orange.png">
+  
+
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+
+  <meta property="article:published_time" content="2020-03-31 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="orange">
+
+
+<div class="container center">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+     &lt; Home &gt; 
+  </div>
+</a>
+
+    </div>
+    
+  </div>
+  
+</header>
+
+
+  <div class="content">
+    
+<div class="post">
+  <h1 class="post-title">
+    <a href="/posts/cmake-cheat-sheet/">Notes on CMake</a></h1>
+  <div class="post-meta">
+    
+      <span class="post-date">
+        2020-03-31 [Updated: 2020-03-31]
+      </span>
+    
+    
+  </div>
+
+  
+
+  
+
+  
+
+  <div class="post-content"><div>
+        <p>How to setup a project using modern CMake features - build, manage dependencies, run tests.</p>
+<h2 id="useful-resources">Useful Resources<a href="#useful-resources" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<ul>
+<li><a href="https://crascit.com/professional-cmake/">Professional CMake</a> Book</li>
+<li>CMake <a href="https://cmake.org/cmake/help/latest/">official documentation</a></li>
+<li>CTest <a href="https://gitlab.kitware.com/cmake/community/-/wikis/doc/ctest/Testing-With-CTest">Wiki</a></li>
+</ul>
+<h2 id="getting-started">Getting Started<a href="#getting-started" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>The simplest <code>CMakeLists.txt</code> contains:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cmake_minimum_required<span style="color:#f92672">(</span>VERSION 3.2<span style="color:#f92672">)</span>
+
+<span style="color:#75715e"># `VERSION` and `LANGUAGES` are optional</span>
+project<span style="color:#f92672">(</span>myProject VERSION 0.0.1 LANGUAGES CXX<span style="color:#f92672">)</span>
+add_executable<span style="color:#f92672">(</span>example main.cpp<span style="color:#f92672">)</span>
+</code></pre></div><p>We can generate build files for the current platform, then build an executable:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">mkdir build <span style="color:#f92672">&amp;&amp;</span> cd build  <span style="color:#75715e"># Out-of-source build</span>
+cmake ..                 <span style="color:#75715e"># Generate build files</span>
+cmake --build .          <span style="color:#75715e"># Run build</span>
+./Debug/example.exe      <span style="color:#75715e"># Run the resulting binary</span>
+</code></pre></div><h2 id="installing-dependencies-that-use-other-build-systems">Installing Dependencies That Use Other Build Systems<a href="#installing-dependencies-that-use-other-build-systems" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>This will create build steps at configure time, and download/extract/build/etc. at build time. We then need to declare the dependencies in the right order. This incomplete example shows the gist of it:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">include<span style="color:#f92672">(</span>ExternalProject<span style="color:#f92672">)</span>
+
+ExternalProject_Add<span style="color:#f92672">(</span>boost
+    PREFIX boost
+    URL https://dl.bintray.com/boostorg/release/1.72.0/source/boost_1_72_0.zip
+    URL_HASH SHA256<span style="color:#f92672">=</span>8c20440aaba21dd963c0f7149517445f50c62ce4eb689df2b5544cc89e6e621e
+    CONFIGURE_COMMAND <span style="color:#e6db74">${</span>_BOOTSTRAP_COMMAND<span style="color:#e6db74">}</span>
+    BUILD_COMMAND <span style="color:#e6db74">${</span>_B2_COMMAND<span style="color:#e6db74">}</span>
+    BUILD_IN_SOURCE <span style="color:#ae81ff">1</span>
+    INSTALL_COMMAND <span style="color:#e6db74">&#34;&#34;</span>
+<span style="color:#f92672">)</span>
+</code></pre></div><p>Resources:</p>
+<ul>
+<li><a href="https://github.com/apache/geode-native/blob/develop/dependencies/boost/CMakeLists.txt">Installing Boost</a></li>
+</ul>
+<h2 id="installing-dependencies-that-use-cmake">Installing Dependencies That Use CMake<a href="#installing-dependencies-that-use-cmake" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>We can use <code>CMake</code> to download and install dependencies.</p>
+<p>The following setup will clone GitHub repos, and install the libraries using their CMake files during the build step:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cmake_minimum_required<span style="color:#f92672">(</span>VERSION 3.8<span style="color:#f92672">)</span>
+
+include<span style="color:#f92672">(</span>FetchContent<span style="color:#f92672">)</span>
+
+FetchContent_Declare<span style="color:#f92672">(</span>googletest
+  GIT_REPOSITORY https://github.com/google/googletest.git
+  GIT_TAG release-1.10.0
+<span style="color:#f92672">)</span>
+
+FetchContent_Declare<span style="color:#f92672">(</span>fmt
+  GIT_REPOSITORY https://github.com/fmtlib/fmt.git
+  GIT_TAG 6.1.2
+<span style="color:#f92672">)</span>
+
+FetchContent_Declare<span style="color:#f92672">(</span>benchmark
+  GIT_REPOSITORY https://github.com/google/benchmark
+<span style="color:#f92672">)</span>
+
+<span style="color:#75715e"># Fix for googletest, otherwise we get LNK2038 errors on Windows</span>
+set<span style="color:#f92672">(</span>gtest_force_shared_crt ON CACHE BOOL <span style="color:#e6db74">&#34;&#34;</span> FORCE<span style="color:#f92672">)</span>
+
+<span style="color:#75715e"># Clone repos and install libraries</span>
+FetchContent_MakeAvailable<span style="color:#f92672">(</span>googletest fmt benchmark<span style="color:#f92672">)</span>
+</code></pre></div><p>Resources:</p>
+<ul>
+<li><a href="https://cmake.org/pipermail/cmake/2019-March/069206.html">Installing github.com/nlohmann/json</a> &lt;1&gt;</li>
+<li><a href="https://github.com/nlohmann/json/issues/1634">Installing github.com/nlohmann/json</a> &lt;2&gt;</li>
+</ul>
+<h2 id="running-tests">Running Tests<a href="#running-tests" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>In the root <code>CMakeLists.txt</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">enable_testing<span style="color:#f92672">()</span>
+include<span style="color:#f92672">(</span>GoogleTest<span style="color:#f92672">)</span>
+
+<span style="color:#75715e"># This directory contains its own CMakeLists.txt</span>
+add_subdirectory<span style="color:#f92672">(</span>test_directory<span style="color:#f92672">)</span>
+</code></pre></div><p>Using the following example test:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">#include</span> <span style="color:#75715e">&#34;gtest/gtest.h&#34;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span>
+TEST(Example, TestNothing) {
+    EXPECT_EQ(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">1</span>);
+}
+</code></pre></div><p>We have a <code>CMakeLists.txt</code> in <code>test_directory</code> to builds the test(s):</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">add_executable<span style="color:#f92672">(</span>myTests test.cpp<span style="color:#f92672">)</span>
+target_link_libraries<span style="color:#f92672">(</span>myTests gtest_main<span style="color:#f92672">)</span>
+gtest_discover_tests<span style="color:#f92672">(</span>myTests<span style="color:#f92672">)</span>
+</code></pre></div><p>Build, then run using <code>CTest</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">cmake ..         <span style="color:#75715e"># Generate build files</span>
+cmake --build .  <span style="color:#75715e"># Build test executable</span>
+ctest            <span style="color:#75715e"># Run tests</span>
+</code></pre></div><p>With the following example output:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">PS C:<span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\d</span>amien<span style="color:#ae81ff">\p</span>roject<span style="color:#ae81ff">\b</span>uild&gt; ctest
+Test project C:<span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\d</span>amien<span style="color:#ae81ff">\p</span>roject<span style="color:#ae81ff">\b</span>uild
+    Start 1: Example.TestNothing
+1/1 Test <span style="color:#75715e">#1: Example.TestNothing .......   Passed    0.01 sec</span>
+
+100% tests passed, <span style="color:#ae81ff">0</span> tests failed out of <span style="color:#ae81ff">1</span>
+
+Total Test time <span style="color:#f92672">(</span>real<span style="color:#f92672">)</span> <span style="color:#f92672">=</span>   0.03 sec
+</code></pre></div><p><strong>! Caveat:</strong> After installing dependencies using <code>FetchContent_Declare</code>, <code>CTest</code> also picks up their tests.</p>
+<p>I have found 2 workarounds so far:</p>
+<ul>
+<li>filter tests using <code>ctest -R &lt;MyTests&gt;</code> (run only tests with names containing <code>&lt;MyTests&gt;</code>)</li>
+<li>when possible, set options to not build tests before the call to <code>FetchContent_MakeAvailable</code>, for example <code>set(BENCHMARK_ENABLE_TESTING OFF)</code></li>
+</ul>
+<h2 id="build-type">Build type<a href="#build-type" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<ul>
+<li>Release</li>
+<li>Debug</li>
+<li>RelWithDebInfo</li>
+<li>MinSizeRel</li>
+</ul>
+<p>On some platforms, we can set the build type from the configuration generation phase:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">cmake -G Ninja -DCMAKE_BUILD_TYPE:STRING<span style="color:#f92672">=</span>Release ../source
+cmake --build .
+</code></pre></div><p>On other platforms eg. Windows, it has to be done at the build phase:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">cmake ../source
+cmake --build . --config Release
+</code></pre></div><h2 id="project-structure">Project Structure<a href="#project-structure" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>I like to use what seems to be called a &ldquo;Superbuild&rdquo; in CMake parlance:</p>
+<blockquote>
+<p>Where dependencies do not use CMake as their build system, a superbuild tends to be the preferred structure. This treats each dependency as its own separate build, with the main project directing the overall sequence and the way details are passed from one dependency’s build to another. Each separate build is added to the main build using <code>ExternalProject</code>. Such an arrangement allows CMake to look at what each build produces and automatically detect information that can then be passed on to other dependencies, thereby avoiding having to manually hard code that information in the main build.</p>
+</blockquote>
+<p><em>- Professional CMake 5th Edition</em></p>
+<p>When necessary we can use <code>ExternalProject</code>, and when we can there is the simpler <code>FetchContent</code> to install dependencies. Most projects already provide knobs to tweak builds, tests, and make it convenient to integrate their projects into ours.</p>
+<pre><code>+------------------+-----------------+
+| ExternalProjects |                 |
++------------------+                 |
+|                                    +------+
+|     Boost                          |      |
+|                                    |      |
++------------------------------------+      |
+                                            |
+                                            |
++--------------+---------------------+      |
+| FetchContent |                     |      |
++--------------+      fmt            |      |
+|                                    &lt;------+
+|    googletest                      |
+|               google/benchmark     |
+|       re2                          +------+
+|            nlohmann/json           |      |
+|                                    |      |
++------------------------------------+      |
+                                            |
+                                            |
++---------------+--------------------+      |
+| Local Project |                    |      |
++---------------+                    |      |
+|                                    &lt;------+
+|     main.cpp     main.hpp          |
+|                                    |
++------------------------------------+
+</code></pre><h2 id="custom-targets">Custom Targets<a href="#custom-targets" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>As part of our workflow, we may need to call external commands or binaries. For example, if we build a benchmark suite:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">add_executable<span style="color:#f92672">(</span>order_book_bench bench.cpp<span style="color:#f92672">)</span>
+
+target_link_libraries<span style="color:#f92672">(</span>order_book_bench PRIVATE benchmark::benchmark order_book<span style="color:#f92672">)</span>
+
+add_custom_target<span style="color:#f92672">(</span>runbench COMMAND order_book_bench<span style="color:#f92672">)</span>
+</code></pre></div><p>We can then call the target as follows:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">cd build <span style="color:#f92672">&amp;&amp;</span> cmake --build . --target runbench
+</code></pre></div>
+      </div></div>
+
+  
+  
+<div class="pagination">
+    <div class="pagination__title">
+        <span class="pagination__title-h"></span>
+        <hr />
+    </div>
+    <div class="pagination__buttons">
+        
+        
+        <span class="button next">
+            <a href="/posts/books-in-2020/">
+                <span class="button__text">Books in 2020</span>
+                <span class="button__icon">→</span>
+            </a>
+        </span>
+        
+    </div>
+</div>
+
+  
+
+  
+
+</div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2021 Powered by <a href="http://gohugo.io">Hugo</a></span>
+    
+        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+<script src="/assets/main.js"></script>
+<script src="/assets/prism.js"></script>
+
+
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>

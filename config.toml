@@ -1,0 +1,23 @@
+baseURL = "/"
+languageCode = "en-us"
+theme = "terminal"
+paginate = 5
+
+[params]
+  contentTypeName = "posts"
+  themeColor = "orange" # ["orange", "blue", "red", "green", "pink"]
+  fullWidthTheme = false # set theme to full screen width
+  centerTheme = true # center theme with default width
+  showLastUpdated = true # set post to show the last updated
+  enableGitInfo = true # post will automatically get the last updated
+  oneHeadingSize = false
+
+[languages]
+  [languages.en]
+    languageName = "English"
+    title = "dtoma blog"
+    subtitle = "A blog"
+    owner = "dtoma"
+    [languages.en.params.logo]
+      logoText = " < Home > "
+      logoHomeLink = "/"
