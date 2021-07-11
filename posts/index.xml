@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on dtoma blog</title>
-    <link>/posts/</link>
+    <link>https://dtoma.github.io/posts/</link>
     <description>Recent content in Posts on dtoma blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 31 Mar 2020 00:00:00 +0000</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 31 Mar 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://dtoma.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Notes on CMake</title>
-      <link>/posts/cmake-cheat-sheet/</link>
+      <link>https://dtoma.github.io/posts/cmake-cheat-sheet/</link>
       <pubDate>Tue, 31 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>/posts/cmake-cheat-sheet/</guid>
+      <guid>https://dtoma.github.io/posts/cmake-cheat-sheet/</guid>
       <description>&lt;p&gt;Notes on using CMake.&lt;/p&gt;</description>
       <content>&lt;p&gt;Notes on using CMake.&lt;/p&gt;
 &lt;h2 id=&#34;useful-resources&#34;&gt;Useful Resources&lt;/h2&gt;
@@ -179,10 +179,10 @@ add_custom_target&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;runbenc
     
     <item>
       <title>Books in 2020</title>
-      <link>/posts/books-in-2020/</link>
+      <link>https://dtoma.github.io/posts/books-in-2020/</link>
       <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>/posts/books-in-2020/</guid>
+      <guid>https://dtoma.github.io/posts/books-in-2020/</guid>
       <description>&lt;p&gt;Books read in 2020.&lt;/p&gt;</description>
       <content>&lt;p&gt;Books read in 2020.&lt;/p&gt;
 &lt;h2 id=&#34;programming&#34;&gt;Programming&lt;/h2&gt;
@@ -203,7 +203,7 @@ add_custom_target&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;runbenc
 &lt;p&gt;&lt;em&gt;Read in Progress&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;A book about&amp;hellip; what the title says.&lt;/p&gt;
 &lt;p&gt;The first part of the book shows how people have found ways to display data in order to make it easy to grasp. My favorite one is this map, showing the size of Napoleon&amp;rsquo;s army during his campaign in Russia:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/images/minard-napoleon-russia-map.png&#34; alt=&#34;Minard&amp;rsquo;s map of Napoleon&amp;rsquo;s Russia campaign&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://dtoma.github.io/images/minard-napoleon-russia-map.png&#34; alt=&#34;Minard&amp;rsquo;s map of Napoleon&amp;rsquo;s Russia campaign&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;ur-fascism&#34;&gt;Ur-Fascism&lt;/h3&gt;
 &lt;p&gt;&lt;em&gt;Umberto ECO&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;★ ★ ★ ★ ★ ★ ★ ★ ★ ☆&lt;/p&gt;
@@ -256,10 +256,10 @@ add_custom_target&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;runbenc
     
     <item>
       <title>Pytest cheat sheet</title>
-      <link>/posts/pytest-cheat-sheet/</link>
+      <link>https://dtoma.github.io/posts/pytest-cheat-sheet/</link>
       <pubDate>Fri, 05 Apr 2019 00:00:00 +0000</pubDate>
       
-      <guid>/posts/pytest-cheat-sheet/</guid>
+      <guid>https://dtoma.github.io/posts/pytest-cheat-sheet/</guid>
       <description>&lt;p&gt;Some notes on the features I use the most from &lt;a href=&#34;https://docs.pytest.org/en/latest/&#34;&gt;pytest&lt;/a&gt;.&lt;/p&gt;</description>
       <content>&lt;p&gt;Some notes on the features I use the most from &lt;a href=&#34;https://docs.pytest.org/en/latest/&#34;&gt;pytest&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;setupteardown&#34;&gt;SetUp/TearDown&lt;/h2&gt;
@@ -335,10 +335,10 @@ we can list inputs that we expect to succeed or fail.&lt;/p&gt;
     
     <item>
       <title>Books in 2019</title>
-      <link>/posts/books-in-2019/</link>
+      <link>https://dtoma.github.io/posts/books-in-2019/</link>
       <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>/posts/books-in-2019/</guid>
+      <guid>https://dtoma.github.io/posts/books-in-2019/</guid>
       <description>&lt;p&gt;Books read in 2019.&lt;/p&gt;</description>
       <content>&lt;p&gt;Books read in 2019.&lt;/p&gt;
 &lt;h2 id=&#34;nonfiction&#34;&gt;Nonfiction&lt;/h2&gt;
