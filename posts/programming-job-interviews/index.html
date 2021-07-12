@@ -6,7 +6,8 @@
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Stories from my programming job interviews.
+<meta name="description" content="Stories from my programming job interviews - on both sides of the table.
+It&amp;rsquo;s easy to find people arguing that the hiring process in tech is broken, or that it&amp;rsquo;s not good enough at filtering bad hires, or any other point of view. I&amp;rsquo;ve been through a few interviews over the years, and I feel like although no process is perfect, it often comes down to having a clear process and people who are good at conducting interviews.
 " />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
@@ -35,7 +36,8 @@
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="article" />
 <meta property="og:title" content="Programming job interviews">
-<meta property="og:description" content="Stories from my programming job interviews.
+<meta property="og:description" content="Stories from my programming job interviews - on both sides of the table.
+It&amp;rsquo;s easy to find people arguing that the hiring process in tech is broken, or that it&amp;rsquo;s not good enough at filtering bad hires, or any other point of view. I&amp;rsquo;ve been through a few interviews over the years, and I feel like although no process is perfect, it often comes down to having a clear process and people who are good at conducting interviews.
 " />
 <meta property="og:url" content="https://dtoma.github.io/posts/programming-job-interviews/" />
 <meta property="og:site_name" content="dtoma blog" />
@@ -128,13 +130,18 @@
         <li><a href="#google-during-covid-19-success">Google, during COVID-19 [success]</a></li>
       </ul>
     </li>
+    <li><a href="#the-experienced-candidate-who-could-not-code-interviewer-no-go">The experienced candidate who could not code [interviewer] [no-go]</a></li>
+    <li><a href="#the-candidate-who-was-good-but-also-not-good-interview-no-go">The candidate who was good, but also not good [interview] [no-go]</a></li>
+    <li><a href="#the-good-candidate-who-didnt-convince-everyone-interviewer-no-go">The good candidate who didn&rsquo;t convince everyone [interviewer] [no-go]</a></li>
+    <li><a href="#the-one-who-spoke-klingon-interviewer-go">The one who spoke Klingon [interviewer] [go]</a></li>
   </ul>
 </nav>
     </div>
   
 
   <div class="post-content"><div>
-        <p>Stories from my programming job interviews.</p>
+        <p>Stories from my programming job interviews - on both sides of the table.</p>
+<p>It&rsquo;s easy to find people arguing that the hiring process in tech is broken, or that it&rsquo;s not good enough at filtering bad hires, or any other point of view. I&rsquo;ve been through a few interviews over the years, and I feel like although no process is perfect, it often comes down to having a clear process and people who are good at conducting interviews.</p>
 <h2 id="internships-as-a-student">Internships as a student<a href="#internships-as-a-student" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
 <h3 id="my-first-internship-success">My first internship [success]<a href="#my-first-internship-success" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
 <ul>
@@ -215,6 +222,27 @@ This ended up making for an average of ~4 meetings from receiving a resume to hi
 <p>I probably flunked the systems design interview by over-engineering my solution from the start. Luckily the interviewer guided me back to a simpler solution, but by them I had wasted a lot of time. I guess the lesson there is to try to solve the problem, not recite design patterns.</p>
 <p>The HR/personality interview was quite pleasant, nothing tricky, just a good conversation.</p>
 <p>After a few days I received the good news: my application would move on to the next step, ie &ldquo;finding a team&rdquo;. I had a few phone calls with managers (as I mentioned earlier, always meet the manager during the hiring process!), and ended up receiving an offer shortly after.</p>
+<h2 id="the-experienced-candidate-who-could-not-code-interviewer-no-go">The experienced candidate who could not code [interviewer] [no-go]<a href="#the-experienced-candidate-who-could-not-code-interviewer-no-go" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>This candidate showed up with a decent CV, with a decade or two in large companies working on projects that looked serious. However, after 30 minutes of effort we still hadn&rsquo;t finished solving this puzzle:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">/*
+</span><span style="color:#75715e"> * Reverse a string. Feel free to use raw pointers,
+</span><span style="color:#75715e"> * the STL, Boost, or any common library you like.
+</span><span style="color:#75715e"> */</span>
+<span style="color:#75715e">/* type */</span> reverse_string(<span style="color:#75715e">/* type */</span> str) {
+    <span style="color:#75715e">/* your implementation */</span>
+}
+</code></pre></div><p>It turned out this candidate was looking for something more on the management side, whereas we were explicitely looking for a C++ programmer whose main responsibility would be refactoring and adding new features to an existing code base.</p>
+<p>This was a lesson in filtering candidates properly before wasting their time making them come to our office.</p>
+<h2 id="the-candidate-who-was-good-but-also-not-good-interview-no-go">The candidate who was good, but also not good [interview] [no-go]<a href="#the-candidate-who-was-good-but-also-not-good-interview-no-go" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>This candidate had a pretty solid resume, almost a decade of relevant experience, and I was very happy with the result of a technical interview I put him through. However, two other colleagues interviewed him right after, and they felt he wouldn&rsquo;t be good enough for the team.</p>
+<p>It turned out we had asked wildly different questions&hellip; because our two teams worked on very different projects. My team needed to iterate quickly on simple projects, so I asked questions about basic data structures, using the STL, and testing code. My colleagues worked on low latency software, so they asked about memory models, kernel bypass, and advanced optimization techniques.</p>
+<p>Our manager took all of our feedback and ended up not going further with this candidate. My team decided to standardize a set of questions depending on which project the candidate would be working on, as we didn&rsquo;t want to reject other potential good hires just because they didn&rsquo;t satisfy the other team&rsquo;s technical requirements. This proved out to be very useful on the long run, as it also made it easier for people who were interviewing candidates for the first time, and it made our feedback more consistent.</p>
+<h2 id="the-good-candidate-who-didnt-convince-everyone-interviewer-no-go">The good candidate who didn&rsquo;t convince everyone [interviewer] [no-go]<a href="#the-good-candidate-who-didnt-convince-everyone-interviewer-no-go" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>We had a candidate pass our coding interview with flying colours, and the 2 interviewers came out of the meeting with a good impression of him. We invited him to meet the team confident that we&rsquo;d hire him, yet after one hour, most of the team members were not convinced he would be a good fit, and had a bad first impression of that candidate&rsquo;s overall behavior.</p>
+<p>We ended up with a &ldquo;no go&rdquo;, and it reinforced our belief that it was important for a candidate to meet most of the team before we took any decision, even if they seemed good enough technically.</p>
+<h2 id="the-one-who-spoke-klingon-interviewer-go">The one who spoke Klingon [interviewer] [go]<a href="#the-one-who-spoke-klingon-interviewer-go" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>I wanted to hire this candidate as soon as I saw &ldquo;Klingon&rdquo; in the language section of his resume. We did however have a process to follow by that point, so we went through a technical interview, a meeting with the team, a meeting with the management, and he ended up with an offer as soon as we were done.</p>
+<p>I handled the technical interview and it was great, we solved some quick puzzles on a whiteboard before talking about more general topics like how to serialize data when sharing between processes, what kind of data or programs should keep in memory or in a database, what kind of database would be most appropriate, and so on. Athough the CV had caught my eye first because of the Star Trek reference, it turned out to be a genuinely good candidate.</p>
       </div></div>
 
   

@@ -13,8 +13,10 @@
       <pubDate>Sun, 11 Jul 2021 00:00:00 +0000</pubDate>
       
       <guid>https://dtoma.github.io/posts/programming-job-interviews/</guid>
-      <description>&lt;p&gt;Stories from my programming job interviews.&lt;/p&gt;</description>
-      <content>&lt;p&gt;Stories from my programming job interviews.&lt;/p&gt;
+      <description>&lt;p&gt;Stories from my programming job interviews - on both sides of the table.&lt;/p&gt;
+&lt;p&gt;It&amp;rsquo;s easy to find people arguing that the hiring process in tech is broken, or that it&amp;rsquo;s not good enough at filtering bad hires, or any other point of view. I&amp;rsquo;ve been through a few interviews over the years, and I feel like although no process is perfect, it often comes down to having a clear process and people who are good at conducting interviews.&lt;/p&gt;</description>
+      <content>&lt;p&gt;Stories from my programming job interviews - on both sides of the table.&lt;/p&gt;
+&lt;p&gt;It&amp;rsquo;s easy to find people arguing that the hiring process in tech is broken, or that it&amp;rsquo;s not good enough at filtering bad hires, or any other point of view. I&amp;rsquo;ve been through a few interviews over the years, and I feel like although no process is perfect, it often comes down to having a clear process and people who are good at conducting interviews.&lt;/p&gt;
 &lt;h2 id=&#34;internships-as-a-student&#34;&gt;Internships as a student&lt;/h2&gt;
 &lt;h3 id=&#34;my-first-internship-success&#34;&gt;My first internship [success]&lt;/h3&gt;
 &lt;ul&gt;
@@ -94,7 +96,28 @@ This ended up making for an average of ~4 meetings from receiving a resume to hi
 &lt;p&gt;The coding interviews were very nice. The questions all started simple, and as I solved each step, the interviewer would add a new one on top (eg. reduce complexity, reduce memory usage&amp;hellip;), until I either finished the problem or ran out of time. There were no big surprise, the questions were more or less scenarised but they were all solvable using standard data structures and algorithms. In my case, I had to work with binary trees, basic graphs, and logic.&lt;/p&gt;
 &lt;p&gt;I probably flunked the systems design interview by over-engineering my solution from the start. Luckily the interviewer guided me back to a simpler solution, but by them I had wasted a lot of time. I guess the lesson there is to try to solve the problem, not recite design patterns.&lt;/p&gt;
 &lt;p&gt;The HR/personality interview was quite pleasant, nothing tricky, just a good conversation.&lt;/p&gt;
-&lt;p&gt;After a few days I received the good news: my application would move on to the next step, ie &amp;ldquo;finding a team&amp;rdquo;. I had a few phone calls with managers (as I mentioned earlier, always meet the manager during the hiring process!), and ended up receiving an offer shortly after.&lt;/p&gt;</content>
+&lt;p&gt;After a few days I received the good news: my application would move on to the next step, ie &amp;ldquo;finding a team&amp;rdquo;. I had a few phone calls with managers (as I mentioned earlier, always meet the manager during the hiring process!), and ended up receiving an offer shortly after.&lt;/p&gt;
+&lt;h2 id=&#34;the-experienced-candidate-who-could-not-code-interviewer-no-go&#34;&gt;The experienced candidate who could not code [interviewer] [no-go]&lt;/h2&gt;
+&lt;p&gt;This candidate showed up with a decent CV, with a decade or two in large companies working on projects that looked serious. However, after 30 minutes of effort we still hadn&amp;rsquo;t finished solving this puzzle:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;/*
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt; * Reverse a string. Feel free to use raw pointers,
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt; * the STL, Boost, or any common library you like.
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt; */&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;/* type */&lt;/span&gt; reverse_string(&lt;span style=&#34;color:#75715e&#34;&gt;/* type */&lt;/span&gt; str) {
+    &lt;span style=&#34;color:#75715e&#34;&gt;/* your implementation */&lt;/span&gt;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;It turned out this candidate was looking for something more on the management side, whereas we were explicitely looking for a C++ programmer whose main responsibility would be refactoring and adding new features to an existing code base.&lt;/p&gt;
+&lt;p&gt;This was a lesson in filtering candidates properly before wasting their time making them come to our office.&lt;/p&gt;
+&lt;h2 id=&#34;the-candidate-who-was-good-but-also-not-good-interview-no-go&#34;&gt;The candidate who was good, but also not good [interview] [no-go]&lt;/h2&gt;
+&lt;p&gt;This candidate had a pretty solid resume, almost a decade of relevant experience, and I was very happy with the result of a technical interview I put him through. However, two other colleagues interviewed him right after, and they felt he wouldn&amp;rsquo;t be good enough for the team.&lt;/p&gt;
+&lt;p&gt;It turned out we had asked wildly different questions&amp;hellip; because our two teams worked on very different projects. My team needed to iterate quickly on simple projects, so I asked questions about basic data structures, using the STL, and testing code. My colleagues worked on low latency software, so they asked about memory models, kernel bypass, and advanced optimization techniques.&lt;/p&gt;
+&lt;p&gt;Our manager took all of our feedback and ended up not going further with this candidate. My team decided to standardize a set of questions depending on which project the candidate would be working on, as we didn&amp;rsquo;t want to reject other potential good hires just because they didn&amp;rsquo;t satisfy the other team&amp;rsquo;s technical requirements. This proved out to be very useful on the long run, as it also made it easier for people who were interviewing candidates for the first time, and it made our feedback more consistent.&lt;/p&gt;
+&lt;h2 id=&#34;the-good-candidate-who-didnt-convince-everyone-interviewer-no-go&#34;&gt;The good candidate who didn&amp;rsquo;t convince everyone [interviewer] [no-go]&lt;/h2&gt;
+&lt;p&gt;We had a candidate pass our coding interview with flying colours, and the 2 interviewers came out of the meeting with a good impression of him. We invited him to meet the team confident that we&amp;rsquo;d hire him, yet after one hour, most of the team members were not convinced he would be a good fit, and had a bad first impression of that candidate&amp;rsquo;s overall behavior.&lt;/p&gt;
+&lt;p&gt;We ended up with a &amp;ldquo;no go&amp;rdquo;, and it reinforced our belief that it was important for a candidate to meet most of the team before we took any decision, even if they seemed good enough technically.&lt;/p&gt;
+&lt;h2 id=&#34;the-one-who-spoke-klingon-interviewer-go&#34;&gt;The one who spoke Klingon [interviewer] [go]&lt;/h2&gt;
+&lt;p&gt;I wanted to hire this candidate as soon as I saw &amp;ldquo;Klingon&amp;rdquo; in the language section of his resume. We did however have a process to follow by that point, so we went through a technical interview, a meeting with the team, a meeting with the management, and he ended up with an offer as soon as we were done.&lt;/p&gt;
+&lt;p&gt;I handled the technical interview and it was great, we solved some quick puzzles on a whiteboard before talking about more general topics like how to serialize data when sharing between processes, what kind of data or programs should keep in memory or in a database, what kind of database would be most appropriate, and so on. Athough the CV had caught my eye first because of the Star Trek reference, it turned out to be a genuinely good candidate.&lt;/p&gt;</content>
     </item>
     
     <item>
