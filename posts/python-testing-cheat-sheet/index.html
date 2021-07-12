@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Python testing cheat sheet :: dtoma blog</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Some notes on the tools I&amp;rsquo;ve used to manage test suites in Python. I believe unittest and hypothesis are sufficient for any project, and doctest is very useful to write short usage examples in function docstrings. Pytest is very popular, so I&amp;rsquo;ve written down what I&amp;rsquo;ve learnt about it.
+" />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="https://dtoma.github.io/posts/python-testing-cheat-sheet/" />
+
+
+
+
+<link rel="stylesheet" href="https://dtoma.github.io/assets/style.css">
+
+
+
+
+
+
+<link rel="apple-touch-icon" href="https://dtoma.github.io/img/apple-touch-icon-192x192.png">
+
+  <link rel="shortcut icon" href="https://dtoma.github.io/img/favicon/orange.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Python testing cheat sheet">
+<meta property="og:description" content="Some notes on the tools I&amp;rsquo;ve used to manage test suites in Python. I believe unittest and hypothesis are sufficient for any project, and doctest is very useful to write short usage examples in function docstrings. Pytest is very popular, so I&amp;rsquo;ve written down what I&amp;rsquo;ve learnt about it.
+" />
+<meta property="og:url" content="https://dtoma.github.io/posts/python-testing-cheat-sheet/" />
+<meta property="og:site_name" content="dtoma blog" />
+
+  
+    <meta property="og:image" content="https://dtoma.github.io/img/favicon/orange.png">
+  
+
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+
+  <meta property="article:published_time" content="2019-04-05 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="orange">
+
+
+<div class="container center">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+     &lt; Home &gt; 
+  </div>
+</a>
+
+    </div>
+    
+  </div>
+  
+</header>
+
+
+  <div class="content">
+    
+<div class="post">
+  <h1 class="post-title">
+    <a href="https://dtoma.github.io/posts/python-testing-cheat-sheet/">Python testing cheat sheet</a></h1>
+  <div class="post-meta">
+    
+      <span class="post-date">
+        2019-04-05 [Updated: 2019-04-05]
+      </span>
+    
+    
+  </div>
+
+  
+
+  
+
+  
+    <div class="table-of-contents">
+      <h2>
+        
+          Table of Contents
+        
+      </h2>
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#unittest">Unittest</a>
+      <ul>
+        <li><a href="#hypothesis">Hypothesis</a></li>
+      </ul>
+    </li>
+    <li><a href="#doctest">Doctest</a></li>
+    <li><a href="#pytest">Pytest</a>
+      <ul>
+        <li><a href="#setupteardown">SetUp/TearDown</a></li>
+        <li><a href="#fixtures-scope-and-autouse">Fixtures scope and autouse</a></li>
+        <li><a href="#testing-logs">Testing logs</a></li>
+        <li><a href="#parametrized-tests">Parametrized tests</a></li>
+        <li><a href="#hypothesis-1">Hypothesis</a></li>
+        <li><a href="#other-plugins">Other plugins</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+  
+
+  <div class="post-content"><div>
+        <p>Some notes on the tools I&rsquo;ve used to manage test suites in Python. I believe <code>unittest</code> and <code>hypothesis</code> are sufficient for any project, and <code>doctest</code> is very useful to write short usage examples in function docstrings. <a href="https://docs.pytest.org/en/latest/">Pytest</a> is very popular, so I&rsquo;ve written down what I&rsquo;ve learnt about it.</p>
+<h2 id="unittest">Unittest<a href="#unittest" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p><a href="https://docs.python.org/3/library/unittest.html">unittest</a> is the standard python unit test module. The official documentation is full of useful examples to learn how to use it. The basic example is:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> unittest
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TestStringMethods</span>(unittest<span style="color:#f92672">.</span>TestCase):
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test_upper</span>(self):
+        self<span style="color:#f92672">.</span>assertEqual(<span style="color:#e6db74">&#39;foo&#39;</span><span style="color:#f92672">.</span>upper(), <span style="color:#e6db74">&#39;FOO&#39;</span>)
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test_isupper</span>(self):
+        self<span style="color:#f92672">.</span>assertTrue(<span style="color:#e6db74">&#39;FOO&#39;</span><span style="color:#f92672">.</span>isupper())
+        self<span style="color:#f92672">.</span>assertFalse(<span style="color:#e6db74">&#39;Foo&#39;</span><span style="color:#f92672">.</span>isupper())
+</code></pre></div><h3 id="hypothesis">Hypothesis<a href="#hypothesis" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p><a href="https://hypothesis.readthedocs.io/en/latest/quickstart.html">Hypothesis</a> can be used with unittest:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> unittest
+
+<span style="color:#f92672">import</span> hypothesis
+<span style="color:#f92672">import</span> hypothesis.strategies <span style="color:#66d9ef">as</span> st
+
+<span style="color:#f92672">from</span> python.fisher_yates.shuffle <span style="color:#f92672">import</span> fisher_yates_shuffle
+
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TestFisherYatesShuffle</span>(unittest<span style="color:#f92672">.</span>TestCase):
+    <span style="color:#a6e22e">@hypothesis</span><span style="color:#f92672">.</span>given(st<span style="color:#f92672">.</span>lists(st<span style="color:#f92672">.</span>integers(), unique<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>))
+    <span style="color:#a6e22e">@hypothesis</span><span style="color:#f92672">.</span>example([])
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test_property_length</span>(self, integers):
+        <span style="color:#e6db74">&#34;&#34;&#34;Test simple properties of the function.
+</span><span style="color:#e6db74">        - Length does not change after shuffling
+</span><span style="color:#e6db74">        - Content doesn&#39;t change after shuffling
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        shuffled <span style="color:#f92672">=</span> fisher_yates_shuffle(integers)
+        self<span style="color:#f92672">.</span>assertEqual(len(integers), len(shuffled))
+        self<span style="color:#f92672">.</span>assertEqual(set(integers), set(shuffled))
+
+    <span style="color:#a6e22e">@hypothesis</span><span style="color:#f92672">.</span>given(st<span style="color:#f92672">.</span>lists(st<span style="color:#f92672">.</span>integers(), unique<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>, min_size<span style="color:#f92672">=</span><span style="color:#ae81ff">20</span>))
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test_property_order</span>(self, integers):
+        <span style="color:#e6db74">&#34;&#34;&#34;Test more properties of the function.
+</span><span style="color:#e6db74">        - With larger lists, we expect that the order changes
+</span><span style="color:#e6db74">          after a shuffle
+</span><span style="color:#e6db74">        &#34;&#34;&#34;</span>
+        shuffled <span style="color:#f92672">=</span> fisher_yates_shuffle(integers)
+        self<span style="color:#f92672">.</span>assertEqual(set(integers), set(shuffled))
+        self<span style="color:#f92672">.</span>assertNotEqual(integers, shuffled)
+</code></pre></div><h2 id="doctest">Doctest<a href="#doctest" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p><a href="https://docs.python.org/3/library/doctest.html">Doctest</a> lets us write tests within a function&rsquo;s docstring. This is, in my opinion, very useful to show how a function is itended to be used. <a href="https://pandas.pydata.org/docs/">Pandas</a> uses doctest extensively, for example <a href="https://github.com/pandas-dev/pandas/blob/master/pandas/core/algorithms.py#L326">this is a doctest in their code</a>, and <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.unique.html">this is the output in the documentation</a>. Such examples are guaranteed to be up-to-date since they are run as tests.</p>
+<h2 id="pytest">Pytest<a href="#pytest" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h2>
+<p>Pytest is, in my opinion, a bit slow to run, but many people prefer writing tests a standalone functions. It also has a few plugins that can bring other quality of life improvements.</p>
+<h3 id="setupteardown">SetUp/TearDown<a href="#setupteardown" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>We can use <code>yield</code> in pytest fixtures to emulate class-based tests SetUp/TearDown methods.
+It works particularly well with decorators - the example below will run <code>test_foo</code> with a patched <code>module.function</code>, then reset the patched function after the test finishes:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> unittest.mock <span style="color:#f92672">import</span> patch
+<span style="color:#f92672">import</span> pytest
+
+<span style="color:#a6e22e">@pytest</span><span style="color:#f92672">.</span>fixture
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">my_fixture</span>():
+    <span style="color:#66d9ef">with</span> patch(<span style="color:#e6db74">&#39;module.function&#39;</span>, return_value<span style="color:#f92672">=</span><span style="color:#ae81ff">42</span>)
+        <span style="color:#66d9ef">yield</span>
+
+<span style="color:#a6e22e">@pytest</span><span style="color:#f92672">.</span>mark<span style="color:#f92672">.</span>usefixtures(<span style="color:#e6db74">&#39;my_fixture&#39;</span>)
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test_foo</span>():
+    <span style="color:#f92672">import</span> module
+    <span style="color:#66d9ef">assert</span> module<span style="color:#f92672">.</span>function() <span style="color:#f92672">==</span> <span style="color:#ae81ff">42</span>
+</code></pre></div><h3 id="fixtures-scope-and-autouse">Fixtures scope and autouse<a href="#fixtures-scope-and-autouse" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>Fixtures can have a scope that is one of:</p>
+<ul>
+<li>function</li>
+<li>class</li>
+<li>module</li>
+<li>package</li>
+<li>session (the whole test run)</li>
+</ul>
+<p>With the <code>autouse</code> parameter, we can automatically load a function for all the tests in a module, for example:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> mymodels <span style="color:#f92672">import</span> SomeModel
+
+<span style="color:#a6e22e">@django_db</span>
+<span style="color:#a6e22e">@pytest</span><span style="color:#f92672">.</span>fixture(scope<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;module&#39;</span>, autouse<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">fixture_populate_database</span>():
+    SomeModel<span style="color:#f92672">.</span>objects<span style="color:#f92672">.</span>create(foo<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Bar&#39;</span>)
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test_foo_is_bar</span>():
+    <span style="color:#66d9ef">assert</span> list(SomeModel<span style="color:#f92672">.</span>objects<span style="color:#f92672">.</span>values_list(<span style="color:#e6db74">&#39;foo&#39;</span>)) <span style="color:#f92672">==</span> [<span style="color:#e6db74">&#39;bar&#39;</span>]
+</code></pre></div><p>Sadly, we can&rsquo;t use session-level fixtures that require a database access (in a Django project). There is a <a href="https://github.com/pytest-dev/pytest-django/issues/514">GitHub issue</a> open.</p>
+<h3 id="testing-logs">Testing logs<a href="#testing-logs" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>We can use the <code>caplog</code> fixture, then filter its output:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test_my_logs</span>(caplog):
+    fixture <span style="color:#f92672">=</span> some_fixture()
+
+    <span style="color:#66d9ef">assert</span> some_function() <span style="color:#f92672">==</span> some_result
+
+    <span style="color:#75715e"># filter by level and logger</span>
+    info_logs <span style="color:#f92672">=</span> [
+        line
+        <span style="color:#66d9ef">for</span> logger, level, line <span style="color:#f92672">in</span> caplog<span style="color:#f92672">.</span>record_tuples
+        <span style="color:#66d9ef">if</span> level <span style="color:#f92672">==</span> logging<span style="color:#f92672">.</span>INFO <span style="color:#f92672">and</span> logger <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;some_module.some_function&#39;</span>
+    ]
+
+    <span style="color:#75715e"># assert the logs are what we expected</span>
+    <span style="color:#66d9ef">assert</span> info_logs <span style="color:#f92672">==</span> [
+        <span style="color:#e6db74">&#39;first message&#39;</span>,
+        <span style="color:#e6db74">&#39;second_message&#39;</span>,
+        <span style="color:#e6db74">&#39;third_message: </span><span style="color:#e6db74">%d</span><span style="color:#e6db74">&#39;</span> <span style="color:#f92672">%</span> fixture<span style="color:#f92672">.</span>id,
+    ]
+</code></pre></div><h3 id="parametrized-tests">Parametrized tests<a href="#parametrized-tests" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p>It can be useful to run a single test over multiple inputs. Using the <code>parametrize</code> decorator,
+we can list inputs that we expect to succeed or fail.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#a6e22e">@pytest</span><span style="color:#f92672">.</span>mark<span style="color:#f92672">.</span>parametrize(
+    <span style="color:#e6db74">&#34;test_input,expected&#34;</span>,
+    [
+        (<span style="color:#e6db74">&#34;3+5&#34;</span>, <span style="color:#ae81ff">8</span>),
+        (<span style="color:#e6db74">&#34;2+4&#34;</span>, <span style="color:#ae81ff">6</span>),
+        pytest<span style="color:#f92672">.</span>param(<span style="color:#e6db74">&#34;6*9&#34;</span>, <span style="color:#ae81ff">42</span>, marks<span style="color:#f92672">=</span>pytest<span style="color:#f92672">.</span>mark<span style="color:#f92672">.</span>xfail)
+    ],
+)
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test_eval</span>(test_input, expected):
+    <span style="color:#66d9ef">assert</span> eval(test_input) <span style="color:#f92672">==</span> expected
+</code></pre></div><h3 id="hypothesis-1">Hypothesis<a href="#hypothesis-1" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<p><a href="https://hypothesis.readthedocs.io/en/latest/quickstart.html">Hypothesis</a> integrates well with Pytest. This example from the official doc:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> hypothesis <span style="color:#f92672">import</span> example, given, strategies <span style="color:#66d9ef">as</span> st
+
+<span style="color:#a6e22e">@given</span>(st<span style="color:#f92672">.</span>text())
+<span style="color:#a6e22e">@example</span>(<span style="color:#e6db74">&#34;&#34;</span>)
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">test_decode_inverts_encode</span>(s):
+    <span style="color:#66d9ef">assert</span> decode(encode(s)) <span style="color:#f92672">==</span> s
+</code></pre></div><h3 id="other-plugins">Other plugins<a href="#other-plugins" class="hanchor" ariaLabel="Anchor">&#8983;</a> </h3>
+<ul>
+<li><a href="https://pytest-django.readthedocs.io/en/latest/">pytest-django</a> can help use Pytest within a Django project.</li>
+<li><a href="https://github.com/pytest-dev/pytest-xdist">pytest-xdist</a> helps run tests in parallel.</li>
+<li><a href="https://github.com/pytest-dev/pytest-cov">pytest-cov</a> allows code coverage measurement</li>
+</ul>
+      </div></div>
+
+  
+
+  
+
+</div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2021 Powered by <a href="http://gohugo.io">Hugo</a></span>
+    
+        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+<script src="https://dtoma.github.io/assets/main.js"></script>
+<script src="https://dtoma.github.io/assets/prism.js"></script>
+
+
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>

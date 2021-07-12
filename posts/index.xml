@@ -6,7 +6,96 @@
     <description>Recent content in Posts on dtoma blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 31 Mar 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://dtoma.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 11 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://dtoma.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Programming job interviews</title>
+      <link>https://dtoma.github.io/posts/programming-job-interviews/</link>
+      <pubDate>Sun, 11 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://dtoma.github.io/posts/programming-job-interviews/</guid>
+      <description>&lt;p&gt;Stories from my programming job interviews.&lt;/p&gt;</description>
+      <content>&lt;p&gt;Stories from my programming job interviews.&lt;/p&gt;
+&lt;h2 id=&#34;internships-as-a-student&#34;&gt;Internships as a student&lt;/h2&gt;
+&lt;h3 id=&#34;the-first-internship-success&#34;&gt;The first internship [success]&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Company size: ~100&lt;/li&gt;
+&lt;li&gt;Sector: consulting, business intelligence&lt;/li&gt;
+&lt;li&gt;Role: programmer (internship)&lt;/li&gt;
+&lt;li&gt;Referral: yes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The interview process was very approachable: no whiteboard coding, a short questionnaire about my experiences (and &lt;em&gt;&amp;ldquo;what&amp;rsquo;s the last book you&amp;rsquo;ve read?&amp;quot;&lt;/em&gt;, which we talked about for a while since we both loved the book I mentioned), and a chat with the president. This was a very humane company and we ended up with a group of good people who could work together well.&lt;/p&gt;
+&lt;h3 id=&#34;the-first-job-in-a-big-company-success&#34;&gt;The first job in a big company [success]&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Company size: ~150&#39;000&lt;/li&gt;
+&lt;li&gt;Sector: finance&lt;/li&gt;
+&lt;li&gt;Role: programmer (internship)&lt;/li&gt;
+&lt;li&gt;Referral: no&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The process began with a 1 hour meeting with the team manager. A few days later, the person who would take charge of my internship took 1 hou to do some whiteboad coading, using simple questions such as:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;What&amp;rsquo;s a lambda?&lt;/li&gt;
+&lt;li&gt;How would you sort an array?&lt;/li&gt;
+&lt;li&gt;Can you write a simple function that does X, Y, or Z?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;My only regret was to not meet more team members during the hiring process, it turned out to be a sign that the team was not a very close-knit bunch. I ended up being seated on the other side of the office, and they&amp;rsquo;d forget to include me when going out for lunch, sad :(&lt;/p&gt;
+&lt;p&gt;At the time, the team didn&amp;rsquo;t have a process defined for interviewing candidates, so the content of an interview would depend on a lot on who was conducting it. A few years later, we would setup three big improvements:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;create a standard list of questions to avoid bias from each interviewing having his favourite trick question&lt;/li&gt;
+&lt;li&gt;give a clear purpose to each of the meetings, to avoid wasting time by going in different directions during a single hour&lt;/li&gt;
+&lt;li&gt;try to make sure a candidate would meet most of the team members before joining
+This ended up making for an average of ~4 meetings from receiving a resume to hiring a candidate, which was probably not too bad compary to the industry standard.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;finance-in-hong-kong&#34;&gt;Finance in Hong Kong&lt;/h2&gt;
+&lt;h3 id=&#34;the-first-hedge-fund-success&#34;&gt;The first hedge fund [success]&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Company size: ~30&lt;/li&gt;
+&lt;li&gt;Sector: finance&lt;/li&gt;
+&lt;li&gt;Role: programmer (permanent employee)&lt;/li&gt;
+&lt;li&gt;Referral: yes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;First round: a questionnaire. A few pages (maybe 10?) of questions about Python, Linux, git, finance&amp;hellip; the idea behind this was to get an overview of what a candidate knew, and what their blind spots were.&lt;/p&gt;
+&lt;p&gt;Second round: whiteboad coding. An hour of solving puzzles on a whiteboard, using questions that were not too difficult and gave room to explore more in-depth.&lt;/p&gt;
+&lt;p&gt;Third round: systems design. An hour of designing a system (drawing on a whiteboard) according to the requirements given by the interviewer.&lt;/p&gt;
+&lt;p&gt;Fourth round: take-home project. The goal was to write a CLI to fetch, shuffle, and display some data from an external API, in a week or so. I then went back to their office, and a few people reviewed my code, asked questions about my decisions and trade-offs, suggest improvements, and ask some general questions about the domain behind this specific project.&lt;/p&gt;
+&lt;p&gt;Fifth round: a phone call for a personality check by one of the senior employees.&lt;/p&gt;
+&lt;p&gt;I did meet most of the employees during this process, however I didn&amp;rsquo;t meet the person who would end up being my manager, which in retrospect I should have made sure to do. I was fired from this company after ~2.5 years, which I believe shows no process, no matter how many steps it involves, can guarantee a good hire.&lt;/p&gt;
+&lt;h2 id=&#34;rebound-after-being-fired&#34;&gt;Rebound after being fired&lt;/h2&gt;
+&lt;h3 id=&#34;a-discreet-but-serious-hedge-fund-failure&#34;&gt;A discreet but serious hedge fund [failure]&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Company size: ~30&lt;/li&gt;
+&lt;li&gt;Sector: finance&lt;/li&gt;
+&lt;li&gt;Role: programmer (permanent employee)&lt;/li&gt;
+&lt;li&gt;Referral: no&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This one involved a weekend project, writing a small C++ program and sending it to the interviewer for review. Most of the problem could be solved by using the right data structures from the standard library, in this case a &lt;code&gt;std::map&lt;/code&gt; with a custom ordering. I also used CMake as a build system and dependency manager, and added some logging (using spdlog), tests (using GoogleTest) and micro-benchmarks (using Google&amp;rsquo;s Benchmark).&lt;/p&gt;
+&lt;p&gt;The second step was to spend a day in their office, roughly from 10:00 to 18:00, with a different person every hour asking questions on programming or trading. They invited me for lunch, which was very nice. Overall the process was rather enjoyable most of the interviewers knew how to drive a good conversation, although it amounted to a full 3 days of work, which would have been difficult had I not been unemployed at the time.&lt;/p&gt;
+&lt;p&gt;In the end, they decided to pass on my application and look for someone more senior with better knowledge of low-latency infrastructure and programming.&lt;/p&gt;
+&lt;h3 id=&#34;a-big-and-famous-hedge-fund-failure&#34;&gt;A big and famous hedge fund [failure]&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Company size: ~1&#39;400&lt;/li&gt;
+&lt;li&gt;Sector: finance&lt;/li&gt;
+&lt;li&gt;Role: programmer (permanent employee)&lt;/li&gt;
+&lt;li&gt;Referral: no&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The first step was an online coding interview using some Hackerrank/GoogleDoc hybrid website that allowed the interviewer to setup some problems, let me write code to solve them, and see my answers. This was for a Python programming role, so the questions focused on python basics (how to pass a lambda to a function, how to use standard data structures, how to use decorators and context managers&amp;hellip;).&lt;/p&gt;
+&lt;p&gt;The second roud was a phone call with the team manager, a business person (not a programmer). This was a bit more awkward as I didn&amp;rsquo;t actually have to answer that many questions - the interviewer spent a lot of time explaining how great the company was and how everyone in the industry would be envious of anyone working there. Also, overtime and lack of social life were mentioned &lt;strong&gt;frequently&lt;/strong&gt; during the phone call.&lt;/p&gt;
+&lt;p&gt;The last round was a phone call with a high level manager in the fund&amp;rsquo;s home country. The main question for this interview was: &amp;ldquo;Tell me about an impressive project you&amp;rsquo;ve worked on&amp;rdquo;. I can see how this can be a great question for some candidates, however at this point I&amp;rsquo;d mostly worked on what I was asked to, and I didn&amp;rsquo;t consider any of that &lt;em&gt;impressive&lt;/em&gt;. I could tell the interviewer thought the same.&lt;/p&gt;
+&lt;p&gt;In the end, they came back to me with the news that they didn&amp;rsquo;t think I&amp;rsquo;d be able to handle the job.&lt;/p&gt;
+&lt;h3 id=&#34;google-during-covid-19-success&#34;&gt;Google, during COVID-19 [success]&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Company size: ~140&#39;000&lt;/li&gt;
+&lt;li&gt;Sector: Tech&lt;/li&gt;
+&lt;li&gt;Role: programmer (permanent employee)&lt;/li&gt;
+&lt;li&gt;Referral: yes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Much has been written on the internet about interviewing at any of the GAFA(-M, -N, etc.). My best friends while preparing for the interviews were Hackerrank, and Steven Skiena&amp;rsquo;s &amp;ldquo;The Algorithm Design Manual&amp;rdquo;. I focused on simple trees, graphs, sorting algorithms, and some basic dynamic programming, thinking that having solid basic would help me face most questions I&amp;rsquo;d be asked, rather than delving deep into a single topic. I would read the chapter on a given topic from Skiena&amp;rsquo;s book, and implement the code in Python, writing some tests along the way to make sure my implementations were correct and I really understood what I was doing.&lt;/p&gt;
+&lt;p&gt;After the initial &amp;ldquo;coding on Google Docs&amp;rdquo; filtering interview, the whole process had to take place remotely because of COVID-19, most of it in one day.&lt;/p&gt;
+&lt;p&gt;The coding interviews were very nice. The questions all started simple, and as I solved each step, the interviewer would add a new one on top (eg. reduce complexity, reduce memory usage&amp;hellip;), until I either finished the problem or ran out of time. There were no big surprise, the questions were more or less scenarised but they were all solvable using standard data structures and algorithms. In my case, I had to work with binary trees, basic graphs, and logic.&lt;/p&gt;
+&lt;p&gt;I probably flunked the systems design interview by over-engineering my solution from the start. Luckily the interviewer guided me back to a simpler solution, but by them I had wasted a lot of time. I guess the lesson there is to try to solve the problem, not recite design patterns.&lt;/p&gt;
+&lt;p&gt;The HR/personality interview was quite pleasant, nothing tricky, just a good conversation.&lt;/p&gt;
+&lt;p&gt;After a few days I received the good news: my application would move on to the next step, ie &amp;ldquo;finding a team&amp;rdquo;. I had a few phone calls with managers (as I mentioned earlier, always meet the manager during the hiring process!), and ended up receiving an offer shortly after.&lt;/p&gt;</content>
+    </item>
+    
     <item>
       <title>Notes on CMake</title>
       <link>https://dtoma.github.io/posts/cmake-cheat-sheet/</link>
@@ -255,14 +344,61 @@ add_custom_target&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;runbenc
     </item>
     
     <item>
-      <title>Pytest cheat sheet</title>
-      <link>https://dtoma.github.io/posts/pytest-cheat-sheet/</link>
+      <title>Python testing cheat sheet</title>
+      <link>https://dtoma.github.io/posts/python-testing-cheat-sheet/</link>
       <pubDate>Fri, 05 Apr 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://dtoma.github.io/posts/pytest-cheat-sheet/</guid>
-      <description>&lt;p&gt;Some notes on the features I use the most from &lt;a href=&#34;https://docs.pytest.org/en/latest/&#34;&gt;pytest&lt;/a&gt;.&lt;/p&gt;</description>
-      <content>&lt;p&gt;Some notes on the features I use the most from &lt;a href=&#34;https://docs.pytest.org/en/latest/&#34;&gt;pytest&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;setupteardown&#34;&gt;SetUp/TearDown&lt;/h2&gt;
+      <guid>https://dtoma.github.io/posts/python-testing-cheat-sheet/</guid>
+      <description>&lt;p&gt;Some notes on the tools I&amp;rsquo;ve used to manage test suites in Python. I believe &lt;code&gt;unittest&lt;/code&gt; and &lt;code&gt;hypothesis&lt;/code&gt; are sufficient for any project, and &lt;code&gt;doctest&lt;/code&gt; is very useful to write short usage examples in function docstrings. &lt;a href=&#34;https://docs.pytest.org/en/latest/&#34;&gt;Pytest&lt;/a&gt; is very popular, so I&amp;rsquo;ve written down what I&amp;rsquo;ve learnt about it.&lt;/p&gt;</description>
+      <content>&lt;p&gt;Some notes on the tools I&amp;rsquo;ve used to manage test suites in Python. I believe &lt;code&gt;unittest&lt;/code&gt; and &lt;code&gt;hypothesis&lt;/code&gt; are sufficient for any project, and &lt;code&gt;doctest&lt;/code&gt; is very useful to write short usage examples in function docstrings. &lt;a href=&#34;https://docs.pytest.org/en/latest/&#34;&gt;Pytest&lt;/a&gt; is very popular, so I&amp;rsquo;ve written down what I&amp;rsquo;ve learnt about it.&lt;/p&gt;
+&lt;h2 id=&#34;unittest&#34;&gt;Unittest&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://docs.python.org/3/library/unittest.html&#34;&gt;unittest&lt;/a&gt; is the standard python unit test module. The official documentation is full of useful examples to learn how to use it. The basic example is:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; unittest
+
+&lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;TestStringMethods&lt;/span&gt;(unittest&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;TestCase):
+
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;test_upper&lt;/span&gt;(self):
+        self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;assertEqual(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;foo&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;upper(), &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;FOO&amp;#39;&lt;/span&gt;)
+
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;test_isupper&lt;/span&gt;(self):
+        self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;assertTrue(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;FOO&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;isupper())
+        self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;assertFalse(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Foo&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;isupper())
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;hypothesis&#34;&gt;Hypothesis&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://hypothesis.readthedocs.io/en/latest/quickstart.html&#34;&gt;Hypothesis&lt;/a&gt; can be used with unittest:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; unittest
+
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; hypothesis
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; hypothesis.strategies &lt;span style=&#34;color:#66d9ef&#34;&gt;as&lt;/span&gt; st
+
+&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; python.fisher_yates.shuffle &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; fisher_yates_shuffle
+
+
+&lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;TestFisherYatesShuffle&lt;/span&gt;(unittest&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;TestCase):
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;@hypothesis&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;given(st&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;lists(st&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;integers(), unique&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;True&lt;/span&gt;))
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;@hypothesis&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;example([])
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;test_property_length&lt;/span&gt;(self, integers):
+        &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;Test simple properties of the function.
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        - Length does not change after shuffling
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        - Content doesn&amp;#39;t change after shuffling
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        &amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
+        shuffled &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; fisher_yates_shuffle(integers)
+        self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;assertEqual(len(integers), len(shuffled))
+        self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;assertEqual(set(integers), set(shuffled))
+
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;@hypothesis&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;given(st&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;lists(st&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;integers(), unique&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;True&lt;/span&gt;, min_size&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;20&lt;/span&gt;))
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;test_property_order&lt;/span&gt;(self, integers):
+        &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;Test more properties of the function.
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        - With larger lists, we expect that the order changes
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;          after a shuffle
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;        &amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
+        shuffled &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; fisher_yates_shuffle(integers)
+        self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;assertEqual(set(integers), set(shuffled))
+        self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;assertNotEqual(integers, shuffled)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;doctest&#34;&gt;Doctest&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://docs.python.org/3/library/doctest.html&#34;&gt;Doctest&lt;/a&gt; lets us write tests within a function&amp;rsquo;s docstring. This is, in my opinion, very useful to show how a function is itended to be used. &lt;a href=&#34;https://pandas.pydata.org/docs/&#34;&gt;Pandas&lt;/a&gt; uses doctest extensively, for example &lt;a href=&#34;https://github.com/pandas-dev/pandas/blob/master/pandas/core/algorithms.py#L326&#34;&gt;this is a doctest in their code&lt;/a&gt;, and &lt;a href=&#34;https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.unique.html&#34;&gt;this is the output in the documentation&lt;/a&gt;. Such examples are guaranteed to be up-to-date since they are run as tests.&lt;/p&gt;
+&lt;h2 id=&#34;pytest&#34;&gt;Pytest&lt;/h2&gt;
+&lt;p&gt;Pytest is, in my opinion, a bit slow to run, but many people prefer writing tests a standalone functions. It also has a few plugins that can bring other quality of life improvements.&lt;/p&gt;
+&lt;h3 id=&#34;setupteardown&#34;&gt;SetUp/TearDown&lt;/h3&gt;
 &lt;p&gt;We can use &lt;code&gt;yield&lt;/code&gt; in pytest fixtures to emulate class-based tests SetUp/TearDown methods.
 It works particularly well with decorators - the example below will run &lt;code&gt;test_foo&lt;/code&gt; with a patched &lt;code&gt;module.function&lt;/code&gt;, then reset the patched function after the test finishes:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; unittest.mock &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; patch
@@ -277,7 +413,7 @@ It works particularly well with decorators - the example below will run &lt;code
 &lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;test_foo&lt;/span&gt;():
     &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; module
     &lt;span style=&#34;color:#66d9ef&#34;&gt;assert&lt;/span&gt; module&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;function() &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;42&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;fixtures-scope-and-autouse&#34;&gt;Fixtures scope and autouse&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;fixtures-scope-and-autouse&#34;&gt;Fixtures scope and autouse&lt;/h3&gt;
 &lt;p&gt;Fixtures can have a scope that is one of:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;function&lt;/li&gt;
@@ -296,8 +432,8 @@ It works particularly well with decorators - the example below will run &lt;code
 
 &lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;test_foo_is_bar&lt;/span&gt;():
     &lt;span style=&#34;color:#66d9ef&#34;&gt;assert&lt;/span&gt; list(SomeModel&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;objects&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;values_list(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;foo&amp;#39;&lt;/span&gt;)) &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;bar&amp;#39;&lt;/span&gt;]
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Sadly, we can&amp;rsquo;t use session-level fixtures that require a database access. There is a &lt;a href=&#34;https://github.com/pytest-dev/pytest-django/issues/514&#34;&gt;GitHub issue&lt;/a&gt; open.&lt;/p&gt;
-&lt;h2 id=&#34;testing-logs&#34;&gt;Testing logs&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Sadly, we can&amp;rsquo;t use session-level fixtures that require a database access (in a Django project). There is a &lt;a href=&#34;https://github.com/pytest-dev/pytest-django/issues/514&#34;&gt;GitHub issue&lt;/a&gt; open.&lt;/p&gt;
+&lt;h3 id=&#34;testing-logs&#34;&gt;Testing logs&lt;/h3&gt;
 &lt;p&gt;We can use the &lt;code&gt;caplog&lt;/code&gt; fixture, then filter its output:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;test_my_logs&lt;/span&gt;(caplog):
     fixture &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; some_fixture()
@@ -317,7 +453,7 @@ It works particularly well with decorators - the example below will run &lt;code
         &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;second_message&amp;#39;&lt;/span&gt;,
         &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;third_message: &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;%d&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;%&lt;/span&gt; fixture&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;id,
     ]
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;parametrized-tests&#34;&gt;Parametrized tests&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;parametrized-tests&#34;&gt;Parametrized tests&lt;/h3&gt;
 &lt;p&gt;It can be useful to run a single test over multiple inputs. Using the &lt;code&gt;parametrize&lt;/code&gt; decorator,
 we can list inputs that we expect to succeed or fail.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;@pytest&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;mark&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;parametrize(
@@ -330,7 +466,20 @@ we can list inputs that we expect to succeed or fail.&lt;/p&gt;
 )
 &lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;test_eval&lt;/span&gt;(test_input, expected):
     &lt;span style=&#34;color:#66d9ef&#34;&gt;assert&lt;/span&gt; eval(test_input) &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; expected
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;hypothesis-1&#34;&gt;Hypothesis&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&#34;https://hypothesis.readthedocs.io/en/latest/quickstart.html&#34;&gt;Hypothesis&lt;/a&gt; integrates well with Pytest. This example from the official doc:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; hypothesis &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; example, given, strategies &lt;span style=&#34;color:#66d9ef&#34;&gt;as&lt;/span&gt; st
+
+&lt;span style=&#34;color:#a6e22e&#34;&gt;@given&lt;/span&gt;(st&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;text())
+&lt;span style=&#34;color:#a6e22e&#34;&gt;@example&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;)
+&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;test_decode_inverts_encode&lt;/span&gt;(s):
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;assert&lt;/span&gt; decode(encode(s)) &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; s
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;other-plugins&#34;&gt;Other plugins&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://pytest-django.readthedocs.io/en/latest/&#34;&gt;pytest-django&lt;/a&gt; can help use Pytest within a Django project.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/pytest-dev/pytest-xdist&#34;&gt;pytest-xdist&lt;/a&gt; helps run tests in parallel.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/pytest-dev/pytest-cov&#34;&gt;pytest-cov&lt;/a&gt; allows code coverage measurement&lt;/li&gt;
+&lt;/ul&gt;</content>
     </item>
     
     <item>
