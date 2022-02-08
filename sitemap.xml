@@ -2,8 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://dtoma.github.io/drafts/</loc>
+    <lastmod>2021-07-13T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://dtoma.github.io/</loc>
-    <lastmod>2021-07-11T00:00:00+00:00</lastmod>
+    <lastmod>2021-07-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dtoma.github.io/drafts/american-student-debt/</loc>
+    <lastmod>2021-07-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dtoma.github.io/drafts/political-videos/</loc>
+    <lastmod>2021-07-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://dtoma.github.io/posts/</loc>
     <lastmod>2021-07-11T00:00:00+00:00</lastmod>
