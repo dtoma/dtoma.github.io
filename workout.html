@@ -251,7 +251,7 @@
     <script>
         window.onload = function () {
             ["1", "2", "3"].forEach(round => {
-                ["lunges", "push", "rows", "plank"].forEach(exo => {
+                ["lunges", "push", "rows", "plank", "band"].forEach(exo => {
                     var s = `${round}-${exo}`;
                     document.getElementById(s).onclick = function toggleStrikethrough() {
                         var e = document.getElementById(s);

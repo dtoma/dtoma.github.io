@@ -374,83 +374,6 @@ add_custom_target&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;runbenc
     </item>
     
     <item>
-      <title>Books in 2020</title>
-      <link>https://dtoma.github.io/posts/books-in-2020/</link>
-      <pubDate>Wed, 01 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://dtoma.github.io/posts/books-in-2020/</guid>
-      <description>&lt;p&gt;Books read in 2020.&lt;/p&gt;</description>
-      <content>&lt;p&gt;Books read in 2020.&lt;/p&gt;
-&lt;h2 id=&#34;programming&#34;&gt;Programming&lt;/h2&gt;
-&lt;h3 id=&#34;professional-cmake-a-practical-guide&#34;&gt;Professional CMake: A Practical Guide&lt;/h3&gt;
-&lt;p&gt;&lt;em&gt;Craig SCOTT&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;★ ★ ★ ★ ★ ★ ★ ☆ ☆ ☆&lt;/p&gt;
-&lt;p&gt;A reference manual for CMake. I was hoping for something more like a project-based walkthrough, but it is very thorough and a useful reference for many topics.&lt;/p&gt;
-&lt;p&gt;I often discover a feature in the book, try to use it, then Google my way around making it work for my use case. Overall, this has simplified my build configurations greatly, for example using &lt;a href=&#34;https://cmake.org/cmake/help/latest/module/FetchContent.html#command:fetchcontent_declare&#34;&gt;FetchContent_Declare&lt;/a&gt; and &lt;a href=&#34;https://cmake.org/cmake/help/latest/module/FetchContent.html#command:fetchcontent_makeavailable&#34;&gt;FetchContent_MakeAvailable&lt;/a&gt; to manage dependencies.&lt;/p&gt;
-&lt;p&gt;There are also pages summarizing best practices which I find very useful to get an idea of how to do thing well.&lt;/p&gt;
-&lt;h2 id=&#34;career&#34;&gt;Career&lt;/h2&gt;
-&lt;h3 id=&#34;developer-hegemony---the-future-of-labor&#34;&gt;Developer Hegemony - The Future of Labor&lt;/h3&gt;
-&lt;p&gt;&lt;em&gt;Erik DIETRICH&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Read in Progress&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;The author&amp;rsquo;s thoughts on how to manage one&amp;rsquo;s career as a programmer, and his observations and experiences from working in large companies, startups, and as an independant consultant.&lt;/p&gt;
-&lt;h2 id=&#34;nonfiction&#34;&gt;Nonfiction&lt;/h2&gt;
-&lt;h3 id=&#34;the-visual-display-of-quantitative-information&#34;&gt;The Visual Display of Quantitative Information&lt;/h3&gt;
-&lt;p&gt;&lt;em&gt;Edward R. TUFTE&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Read in Progress&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;A book about&amp;hellip; what the title says.&lt;/p&gt;
-&lt;p&gt;The first part of the book shows how people have found ways to display data in order to make it easy to grasp. My favorite one is this map, showing the size of Napoleon&amp;rsquo;s army during his campaign in Russia:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://dtoma.github.io/images/minard-napoleon-russia-map.png&#34; alt=&#34;Minard&amp;rsquo;s map of Napoleon&amp;rsquo;s Russia campaign&#34;&gt;&lt;/p&gt;
-&lt;h3 id=&#34;ur-fascism&#34;&gt;Ur-Fascism&lt;/h3&gt;
-&lt;p&gt;&lt;em&gt;Umberto ECO&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;★ ★ ★ ★ ★ ★ ★ ★ ★ ☆&lt;/p&gt;
-&lt;p&gt;Not really a book, just 9 pages. Umberto Eco writes about &amp;ldquo;what is fascism?&amp;rdquo;. I think this is a useful question to ask even today, as we hear people calling each other fascists so often (especially on Twitter).&lt;/p&gt;
-&lt;p&gt;He observes that many regimes have been called &amp;ldquo;fascist&amp;rdquo; while having different characteristics: for example, Hitler, Mussolini, and Franco ran very different ships. This brief text tries to define &amp;ldquo;Ur-Fascism&amp;rdquo;, or &amp;ldquo;Eternal Fascism&amp;rdquo;, the root of all fascisms, as having the following traits (edited for brevity):&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Cult of tradition&lt;/strong&gt;, being &lt;em&gt;syncretistic&lt;/em&gt; (the amalgamation or attempted amalgamation of different religions, cultures, or schools of thought) while tolerating inevitable contradictions&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Rejection of modernism&lt;/strong&gt;, cult of &amp;ldquo;action for action&amp;rsquo;s sake&amp;rdquo; (&lt;em&gt;action being beautiful in itself, it must be taken before, or without, any previous reflection&lt;/em&gt;)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Disagreement is treason&lt;/strong&gt; (because &lt;em&gt;no syncretistic faith can withstand analytical criticism&lt;/em&gt;)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Obsession with a plot&lt;/strong&gt;, common ennemy or ennemies, or frustrations (&lt;em&gt;When I was a boy I was taught to think of Englishmen as the five-meal people.They ate more frequently than the poor but sober Italians&lt;/em&gt;)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Contempt for the weak&lt;/strong&gt;, popular elitism (&lt;em&gt;Every subordinate leader despises his own underlings, and each of them despises his inferiors. This reinforces the sense of mass elitism&lt;/em&gt;)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Newspeak&lt;/strong&gt; (&lt;em&gt;Nazi or Fascist schoolbooks made use of an impoverished vocabulary, and an elementary syntax, in order to limit the instruments for complex and critical reasoning. But we must be ready to identify other kinds of Newspeak, even if they take the apparently innocent form of a popular talk show.&lt;/em&gt;)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;creativity-inc&#34;&gt;Creativity, Inc&lt;/h3&gt;
-&lt;p&gt;&lt;em&gt;Ed CATMULL&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Read in Progress&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.goodreads.com/book/show/18077903-creativity-inc&#34;&gt;Goodreads&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;A book about the creation, experiences, and lessons learnt at Pixar.&lt;/p&gt;
-&lt;p&gt;The first part tells us the story of how the author came to run Pixar, and his problems learning how to manage people. He takes the example of Toy Story and Toy Story 2, and how difficult it was to keep his teams engaged and working in good intelliegence from one project to another:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;I read many such [business] books as I set about trying to become a better, more effective manager. [&amp;hellip;] These books were stocked with catchy phrases like &amp;ldquo;Dare to fail!&amp;rdquo; or &amp;ldquo;Follow people and people will follow you!&amp;rdquo; or &amp;ldquo;Focus, focus, focus!&amp;rdquo; [&amp;hellip;] But none of them gave me any cluse as to what to do or what I should focus on.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Clearly, it wasn&amp;rsquo;t enough for managers to have good ideas - they had to be able to engender support for those ideas among the people who&amp;rsquo;d be charged with employing them.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;My total ignorance of this dynamic [Note: 2 teams at odds with each other] caught me by surprise. My door had always been open! I&amp;rsquo;d assumed that that would guarantee me a place in the loop, at least when it came to major sources of tension like this.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;The author also talks about some of his principles, like hiring smart people, and making sure everyone can take responsibility for the quality of the end product:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;And ever since, I&amp;rsquo;ve made a policy of trying to hire people who are smarter than I am. The obvious payoffs of exceptional people are that they innovate, excel, and generally make your company - and, by extension, you - look good.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Japanese companies that implemented Deming&amp;rsquo;s ideas made it easy for workers to do so: They installed a cord that anyone could pull in order to bring production to a halt. Before long, Japanese companies were enjoying unheard-of levels of quality, productivity, and market share.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;fiction&#34;&gt;Fiction&lt;/h2&gt;
-&lt;h3 id=&#34;the-murder-of-roger-ackroyd&#34;&gt;The Murder of Roger Ackroyd&lt;/h3&gt;
-&lt;p&gt;&lt;em&gt;Agatha CHRISTIE&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.goodreads.com/book/show/16328.The_Murder_of_Roger_Ackroyd&#34;&gt;Goodreads&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Can&amp;rsquo;t really say why it&amp;rsquo;s good without spoiling it, but it&amp;rsquo;s good and well worth a read. An unusual plot twist.&lt;/p&gt;
-&lt;h2 id=&#34;science-fiction&#34;&gt;Science-Fiction&lt;/h2&gt;
-&lt;h3 id=&#34;14&#34;&gt;14&lt;/h3&gt;
-&lt;p&gt;&lt;em&gt;Peter CLINES&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.goodreads.com/book/show/15062217-14&#34;&gt;Goodreads&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;A guy finds a nice studio in an old building, for a surprisingly cheap rent. Turns out the building is weird (really weird) and stuff happens as the protagonist and his neighbors try to understand more about it.&lt;/p&gt;
-&lt;p&gt;I found this book fun and easy to read. The characters and dialogues were entertaining and the plot was interesting.&lt;/p&gt;</content>
-    </item>
-    
-    <item>
       <title>Python testing cheat sheet</title>
       <link>https://dtoma.github.io/posts/python-testing-cheat-sheet/</link>
       <pubDate>Fri, 05 Apr 2019 00:00:00 +0000</pubDate>
@@ -590,13 +513,20 @@ we can list inputs that we expect to succeed or fail.&lt;/p&gt;
     </item>
     
     <item>
-      <title>Books in 2019</title>
-      <link>https://dtoma.github.io/posts/books-in-2019/</link>
+      <title>The Bookshelf</title>
+      <link>https://dtoma.github.io/posts/the-bookshelf/</link>
       <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://dtoma.github.io/posts/books-in-2019/</guid>
-      <description>&lt;p&gt;Books read in 2019.&lt;/p&gt;</description>
-      <content>&lt;p&gt;Books read in 2019.&lt;/p&gt;
+      <guid>https://dtoma.github.io/posts/the-bookshelf/</guid>
+      <description>&lt;p&gt;Books I&amp;rsquo;ve read.&lt;/p&gt;</description>
+      <content>&lt;p&gt;Books I&amp;rsquo;ve read.&lt;/p&gt;
+&lt;h2 id=&#34;programming&#34;&gt;Programming&lt;/h2&gt;
+&lt;h3 id=&#34;professional-cmake-a-practical-guide&#34;&gt;Professional CMake: A Practical Guide&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;Craig SCOTT&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;★ ★ ★ ★ ★ ★ ★ ☆ ☆ ☆&lt;/p&gt;
+&lt;p&gt;A reference manual for CMake. I was hoping for something more like a project-based walkthrough, but it is very thorough and a useful reference for many topics.&lt;/p&gt;
+&lt;p&gt;I often discover a feature in the book, try to use it, then Google my way around making it work for my use case. Overall, this has simplified my build configurations greatly, for example using &lt;a href=&#34;https://cmake.org/cmake/help/latest/module/FetchContent.html#command:fetchcontent_declare&#34;&gt;FetchContent_Declare&lt;/a&gt; and &lt;a href=&#34;https://cmake.org/cmake/help/latest/module/FetchContent.html#command:fetchcontent_makeavailable&#34;&gt;FetchContent_MakeAvailable&lt;/a&gt; to manage dependencies.&lt;/p&gt;
+&lt;p&gt;There are also pages summarizing best practices which I find very useful to get an idea of how to do thing well.&lt;/p&gt;
 &lt;h2 id=&#34;nonfiction&#34;&gt;Nonfiction&lt;/h2&gt;
 &lt;h3 id=&#34;when-genius-failed&#34;&gt;When Genius Failed&lt;/h3&gt;
 &lt;p&gt;&lt;em&gt;The Rise and Fall of Long-Term Capital Management&lt;/em&gt;&lt;/p&gt;
@@ -643,6 +573,11 @@ we can list inputs that we expect to succeed or fail.&lt;/p&gt;
 &lt;li&gt;Personality tests in job applications&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;I think this book makes an important point but stops short of offering a solution.&lt;/p&gt;
+&lt;h2 id=&#34;career&#34;&gt;Career&lt;/h2&gt;
+&lt;h3 id=&#34;developer-hegemony---the-future-of-labor&#34;&gt;Developer Hegemony - The Future of Labor&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;Erik DIETRICH&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Read in Progress&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;The author&amp;rsquo;s thoughts on how to manage one&amp;rsquo;s career as a programmer, and his observations and experiences from working in large companies, startups, and as an independant consultant.&lt;/p&gt;
 &lt;h2 id=&#34;finance&#34;&gt;Finance&lt;/h2&gt;
 &lt;h3 id=&#34;the-little-book-of-common-sense-investing&#34;&gt;The Little Book of Common Sense Investing&lt;/h3&gt;
 &lt;p&gt;&lt;em&gt;John BOGLE&lt;/em&gt;&lt;/p&gt;
@@ -674,6 +609,11 @@ we can list inputs that we expect to succeed or fail.&lt;/p&gt;
 &lt;h4 id=&#34;books-3-to-10&#34;&gt;Books 3 to 10&lt;/h4&gt;
 &lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 &lt;p&gt;All easy and entertaining reads. Plots are okay, lots of action, a few side stories along the way to keep the main character interesting. I will read more of this series.&lt;/p&gt;
+&lt;h3 id=&#34;the-murder-of-roger-ackroyd&#34;&gt;The Murder of Roger Ackroyd&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;Agatha CHRISTIE&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.goodreads.com/book/show/16328.The_Murder_of_Roger_Ackroyd&#34;&gt;Goodreads&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Can&amp;rsquo;t really say why it&amp;rsquo;s good without spoiling it, but it&amp;rsquo;s good and well worth a read. An unusual plot twist.&lt;/p&gt;
 &lt;h2 id=&#34;fantasy&#34;&gt;Fantasy&lt;/h2&gt;
 &lt;h3 id=&#34;the-dresden-files-books-1-to-15&#34;&gt;The Dresden Files (books 1 to 15)&lt;/h3&gt;
 &lt;p&gt;&lt;em&gt;Jim BUTCHER&lt;/em&gt;&lt;/p&gt;
@@ -708,11 +648,17 @@ The Wise Man&amp;rsquo;s Fear  | &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML
 &lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.goodreads.com/book/show/414999&#34;&gt;Goodreads&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;One of my favorite and most depressing reads this year. The story of a community that creates a utopic society, mysterious aliens that come to benevolently rule earth, and evolution. Thought-provoking and hard not to finish in one go.&lt;/p&gt;
-&lt;h4 id=&#34;the-lathe-of-heaven&#34;&gt;The Lathe of Heaven&lt;/h4&gt;
+&lt;h3 id=&#34;the-lathe-of-heaven&#34;&gt;The Lathe of Heaven&lt;/h3&gt;
 &lt;p&gt;&lt;em&gt;Ursula K. LE GUIN&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.goodreads.com/book/show/59924&#34;&gt;Goodreads&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Another of my favorite books this year. The main character can alter reality while dreaming, his psychiatrist realizes this and tries to work with it, only for things to go really out of whack. Psychedelic and mesmerizing.&lt;/p&gt;</content>
+&lt;p&gt;Another of my favorite books this year. The main character can alter reality while dreaming, his psychiatrist realizes this and tries to work with it, only for things to go really out of whack. Psychedelic and mesmerizing.&lt;/p&gt;
+&lt;h3 id=&#34;14&#34;&gt;14&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;Peter CLINES&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.goodreads.com/book/show/15062217-14&#34;&gt;Goodreads&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;A guy finds a nice studio in an old building, for a surprisingly cheap rent. Turns out the building is weird (really weird) and stuff happens as the protagonist and his neighbors try to understand more about it.&lt;/p&gt;
+&lt;p&gt;I found this book fun and easy to read. The characters and dialogues were entertaining and the plot was interesting.&lt;/p&gt;</content>
     </item>
     
   </channel>
