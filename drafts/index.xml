@@ -6,7 +6,27 @@
     <description>Recent content in Drafts on dtoma blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 13 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://dtoma.github.io/drafts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 30 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://dtoma.github.io/drafts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>C&#43;&#43; Simple Toolbox</title>
+      <link>https://dtoma.github.io/drafts/cpp-simple-toolbox/</link>
+      <pubDate>Mon, 30 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://dtoma.github.io/drafts/cpp-simple-toolbox/</guid>
+      <description>&lt;p&gt;Simple data structures, algorithms, tools and processes that help make C++ work for a team.&lt;/p&gt;</description>
+      <content>&lt;p&gt;Simple data structures, algorithms, tools and processes that help make C++ work for a team.&lt;/p&gt;
+&lt;h2 id=&#34;data-structures&#34;&gt;Data Structures&lt;/h2&gt;
+&lt;h3 id=&#34;compatibility-with-stl-algorithms&#34;&gt;Compatibility With STL Algorithms&lt;/h3&gt;
+&lt;h3 id=&#34;small-size-optimisation&#34;&gt;Small Size Optimisation&lt;/h3&gt;
+&lt;h3 id=&#34;hash-maps&#34;&gt;Hash maps&lt;/h3&gt;
+&lt;h2 id=&#34;algorithms&#34;&gt;Algorithms&lt;/h2&gt;
+&lt;h2 id=&#34;tools--processes&#34;&gt;Tools &amp;amp; Processes&lt;/h2&gt;
+&lt;h3 id=&#34;formatting&#34;&gt;Formatting&lt;/h3&gt;
+&lt;h3 id=&#34;testing&#34;&gt;Testing&lt;/h3&gt;
+&lt;h3 id=&#34;benchmarking&#34;&gt;Benchmarking&lt;/h3&gt;
+&lt;h3 id=&#34;logging&#34;&gt;Logging&lt;/h3&gt;</content>
+    </item>
+    
     <item>
       <title>Notes on american sudent debt</title>
       <link>https://dtoma.github.io/drafts/american-student-debt/</link>

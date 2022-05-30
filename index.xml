@@ -6,7 +6,27 @@
     <description>Recent content on dtoma blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 13 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://dtoma.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 30 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://dtoma.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>C&#43;&#43; Simple Toolbox</title>
+      <link>https://dtoma.github.io/drafts/cpp-simple-toolbox/</link>
+      <pubDate>Mon, 30 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://dtoma.github.io/drafts/cpp-simple-toolbox/</guid>
+      <description>&lt;p&gt;Simple data structures, algorithms, tools and processes that help make C++ work for a team.&lt;/p&gt;</description>
+      <content>&lt;p&gt;Simple data structures, algorithms, tools and processes that help make C++ work for a team.&lt;/p&gt;
+&lt;h2 id=&#34;data-structures&#34;&gt;Data Structures&lt;/h2&gt;
+&lt;h3 id=&#34;compatibility-with-stl-algorithms&#34;&gt;Compatibility With STL Algorithms&lt;/h3&gt;
+&lt;h3 id=&#34;small-size-optimisation&#34;&gt;Small Size Optimisation&lt;/h3&gt;
+&lt;h3 id=&#34;hash-maps&#34;&gt;Hash maps&lt;/h3&gt;
+&lt;h2 id=&#34;algorithms&#34;&gt;Algorithms&lt;/h2&gt;
+&lt;h2 id=&#34;tools--processes&#34;&gt;Tools &amp;amp; Processes&lt;/h2&gt;
+&lt;h3 id=&#34;formatting&#34;&gt;Formatting&lt;/h3&gt;
+&lt;h3 id=&#34;testing&#34;&gt;Testing&lt;/h3&gt;
+&lt;h3 id=&#34;benchmarking&#34;&gt;Benchmarking&lt;/h3&gt;
+&lt;h3 id=&#34;logging&#34;&gt;Logging&lt;/h3&gt;</content>
+    </item>
+    
     <item>
       <title>Notes on american sudent debt</title>
       <link>https://dtoma.github.io/drafts/american-student-debt/</link>
@@ -622,11 +642,32 @@ we can list inputs that we expect to succeed or fail.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/The_Dresden_Files&#34;&gt;Harry Dresden&lt;/a&gt; is the only wizard detective of Chicago. He&amp;rsquo;s a confident guy who wields both revolvers and fireballs (and sarcasm). As he investigates a series of homicides, he ends up in more trouble than he could ever have imagined. As the series goes on, the main character learns a lot and matures along the way, makes friends, loses friends. Very entertaining!&lt;/p&gt;
 &lt;h3 id=&#34;the-mistborn-trilogy&#34;&gt;The Mistborn Trilogy&lt;/h3&gt;
 &lt;p&gt;&lt;em&gt;Brandon SANDERSON&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Book                  | Rating                                 | Goodreads
-&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-+&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-+&amp;mdash;&amp;mdash;&amp;mdash;&amp;ndash;
-The Final Empire      | &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; | &lt;a href=&#34;https://www.goodreads.com/book/show/68428&#34;&gt;Link&lt;/a&gt;
-The Well of Ascension | &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; | &lt;a href=&#34;https://www.goodreads.com/book/show/68429&#34;&gt;Link&lt;/a&gt;
-The Hero of Ages      | &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; | &lt;a href=&#34;https://www.goodreads.com/book/show/2767793&#34;&gt;Link&lt;/a&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Book&lt;/th&gt;
+&lt;th&gt;Rating&lt;/th&gt;
+&lt;th&gt;Goodreads&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;The Final Empire&lt;/td&gt;
+&lt;td&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.goodreads.com/book/show/68428&#34;&gt;Link&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;The Well of Ascension&lt;/td&gt;
+&lt;td&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.goodreads.com/book/show/68429&#34;&gt;Link&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;The Hero of Ages&lt;/td&gt;
+&lt;td&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.goodreads.com/book/show/2767793&#34;&gt;Link&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 &lt;p&gt;In a world where people can eat metals to gain magical powers, a young woman goes from beggar to hero when she discovers her own rare and powerful abilities.&lt;/p&gt;
 &lt;p&gt;I loved the first tome, liked the second one, and slowly bore through the third one. I felt that it started full of action, new ideas, punchy dialogue, and slowly became slower, more depressing, with a lot of inner dialogue from multiple characters towards the end. I guess since the end of the world is coming, it makes sense to change the mood of the characters accordingly, I just had a hard time finishing it.&lt;/p&gt;
 &lt;p&gt;I was also not a fan of the ending, which felt a bit like a Deus Ex Machina. Overall worth a read.&lt;/p&gt;
@@ -637,10 +678,27 @@ The Hero of Ages      | &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted 
 &lt;p&gt;An awkward kid turns out to be the son of the most powerful man in the world. Magic works in an interesting way, not unlike in the Mistborn trilogy. Easy to read and entertaining, will read the rest of the saga.&lt;/p&gt;
 &lt;h3 id=&#34;the-kingkiller-chronicles&#34;&gt;The Kingkiller Chronicles&lt;/h3&gt;
 &lt;p&gt;&lt;em&gt;Patrick ROTHFUSS&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Book                 | Rating                                 | Goodreads
-&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;+&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-+&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;
-The Name of the Wind | &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; | &lt;a href=&#34;https://www.goodreads.com/book/show/186074&#34;&gt;Link&lt;/a&gt;
-The Wise Man&amp;rsquo;s Fear  | &lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; | &lt;a href=&#34;https://www.goodreads.com/book/show/1215032&#34;&gt;Link&lt;/a&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Book&lt;/th&gt;
+&lt;th&gt;Rating&lt;/th&gt;
+&lt;th&gt;Goodreads&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;The Name of the Wind&lt;/td&gt;
+&lt;td&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.goodreads.com/book/show/186074&#34;&gt;Link&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;The Wise Man&amp;rsquo;s Fear&lt;/td&gt;
+&lt;td&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://www.goodreads.com/book/show/1215032&#34;&gt;Link&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 &lt;p&gt;The story, told by himself, of &lt;a href=&#34;https://en.wikipedia.org/wiki/The_Kingkiller_Chronicle&#34;&gt;Kvothe&lt;/a&gt;, a musician-wizard-thief-assassin that seems to be infamous for reasons we still don&amp;rsquo;t know. His parents were killed by mysterious bad guys when he was still a (naive genius) kid, and he decided to do what it takes to find out more about them. The story has ups and downs, but it is well-written and captivating. More books are yet to come in this saga, and I will definitely read them.&lt;/p&gt;
 &lt;h2 id=&#34;science-fiction&#34;&gt;Science-fiction&lt;/h2&gt;
 &lt;h3 id=&#34;childhoods-end&#34;&gt;Childhood&amp;rsquo;s End&lt;/h3&gt;
